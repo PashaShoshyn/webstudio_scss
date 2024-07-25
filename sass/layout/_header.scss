@@ -1,0 +1,132 @@
+.header-flex,
+.header-navigation,
+.header-list,
+.contacts-list {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    background-color: var(--color-body-white);
+    padding-top: 24px;
+    padding-bottom: 25px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    animation: fade-in 2s ease-in-out;
+}
+
+
+.header-navigation {
+    margin-right: 318px;
+}
+
+.header-logo {
+    color: var(--color-body-blue);
+    font-size: 26px;
+    font-family: "Raleway";
+    font-weight: 700;
+    line-height: 1.17;
+}
+
+.header-logo_current_1 {
+    color: var(--color-body-black_2);
+    font-size: 26px;
+    font-family: "Raleway";
+    font-weight: 700;
+    line-height: 1.17;
+    margin-right: 93px;
+}
+
+.header_item:not(:last-child) {
+    margin-right: 50px
+}
+
+.header-link_active {
+    font-size: 14px;
+    color: var(--color-body-black);
+    font-weight: 500;
+    line-height: 1.17;
+    position: relative;
+    transition-property: color ;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+}
+
+
+
+.active::after{
+    width: 100%;
+    height: 2px;
+    content: "";
+    position: absolute;
+    bottom: -28px;
+    border-radius: 2px;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--color-body-blue);
+    display: block;
+
+    
+    transition-property:  color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+}
+
+
+
+
+
+
+
+ 
+ .header-link_active:hover {
+    color: var(--color-body-blue);
+} 
+
+
+
+.conacts-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+
+.conacts-item {
+    fill: var(--color-body-gray);
+}
+
+.conacts-item:hover {
+    fill: #2196F3;
+}
+
+.header-link_current {
+    color: var(--color-body-gray);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.17;
+    font-family: 'Roboto';
+    display: flex;
+
+    transition-property:  fill, color ;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+
+}
+
+.header-link_current:hover {
+    color: var(--color-body-blue);
+}
+
+.header-img {
+    margin-right: 10px;
+}
+
+
+
+.main {
+    padding-top: 80px;
+}
