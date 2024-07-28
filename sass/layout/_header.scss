@@ -13,7 +13,7 @@
     position: fixed;
     width: 100%;
     z-index: 1;
-    animation: fade-in 2s ease-in-out;
+   
 }
 
 
@@ -42,7 +42,7 @@
     margin-right: 50px
 }
 
-.header-link_active {
+.header-link_active{
     font-size: 14px;
     color: var(--color-body-black);
     font-weight: 500;
@@ -102,7 +102,7 @@
     fill: #2196F3;
 }
 
-.header-link_current {
+.header-link_current{
     color: var(--color-body-gray);
     font-size: 14px;
     font-weight: 500;

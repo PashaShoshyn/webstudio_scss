@@ -18,6 +18,39 @@
     --color-body-black_2: #000000;
 
 
+    $colors:(
+        black: #212121,
+        black_2: #000000,
+        black_3: #2F303A,
+
+        gray: #757575,
+        gray_2: #FFFFFF99,
+        gray_3: #AFB1B8,
+
+        white: #FFFFFF,
+        white_2: #F5F4FA,
+
+        blue: #2196F3,
+    );
+
+    // $colors:(
+    //     white: #FFFFFF,
+    //     white_2: #F5F4FA,
+    // );
+
+    // $colors:( 
+    //     gray: #757575,
+    //     gray_2: #FFFFFF99,
+    //     gray_3: #AFB1B8,
+    // );
+
+    // $colors:(
+    //     blue: #2196F3,
+    // );
+       
+    
+
+
     --font-family: "Roboto", sans-serif;
     --second-family: "Raleway", sans-serif;
 }

@@ -1,6 +1,6 @@
 body {
     font-family: 'Roboto';
     font-size: 14px;
-    color: black;
-    background-color: white;
+    color: map-get($colors, 'black_2');
+    background-color: map-get($colors, 'white');
 }
