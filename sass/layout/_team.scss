@@ -1,5 +1,5 @@
 .team {
-    background-color: var(--color-body-white_2);
+    background-color: getColor('white-backround');
     padding-top: 94px;
     padding-bottom: 94px;
  
@@ -11,7 +11,7 @@
 }
 
 .team-item {
-    background-color: var(--color-body-white);
+    background-color: getColor('white');
     padding-bottom: 30px;
     display: flex;
     flex-direction: column;
@@ -26,7 +26,7 @@
 
 
 .team-title_small {
-    color: var(--color-body-black);
+    color: getColor('black');
     font-size: 16px;
     font-weight: 500;
     line-height: 1.17;
@@ -35,7 +35,7 @@
 }
 
 .team-text {
-    color: var(--color-body-gray);
+    color: getColor('gray-backround');
     font-size: 16px;
     font-weight: 400;
     line-height: 1.17;
@@ -53,7 +53,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 40px;
-    fill: #AFB1B8;
+    fill: getColor('gray-text');
 
     transition-property:  fill ;
     transition-duration: 250ms;
@@ -67,6 +67,6 @@
 }
 
 .team-images:hover {
-    fill: var(--color-body-white);
-    background-color: var(--color-body-blue);
+    fill: getColor('white');
+    background-color: getColor('blue');
 }

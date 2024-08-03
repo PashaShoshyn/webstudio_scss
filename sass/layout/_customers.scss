@@ -17,7 +17,7 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-delay: 0;
-
+    color: getColor('black');
     
 }
 
@@ -26,11 +26,12 @@
 
 
 .customers-title {
-    font-family: 'Roboto';
+    font-family: getFont('font-family');
     font-weight: 700;
     font-size: 36px;
     line-height: 42.19px;
     margin-bottom: 50px;
+    color: getColor('black');
 }
 
 
@@ -41,14 +42,13 @@
     align-items: center;
     width: 170px;
     height: 92px;
-    outline: solid #AFB1B8 1px;
+    outline: solid  getColor('gray-text') 1px;
     border-radius: 4px;
 
 }
 
 .customers-item:hover {
-    outline: solid #2196F3 1px;
-
+    outline: solid  getColor('gray-blue') 1px;
 }
 
 .customers-li:not(:last-child) {
@@ -57,7 +57,7 @@
 }
 
 .customers-list {
-    outline: solid #AFB1B8 1px;
+    outline: solid  getColor('gray-text')  1px;
     border-radius: 4px;
     width: 170px;
     height: 92px;
@@ -74,6 +74,6 @@
 }
 
 .customers-list:hover {
-    outline: solid var(--color-body-blue) 1px;
-    fill: var(--color-body-blue);
+    outline: solid map-get($colors, 'blue') 1px;
+    fill: getColor('gray-blue');
 }

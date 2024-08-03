@@ -1,6 +1,6 @@
 body {
-    font-family: 'Roboto';
+    font-family: getFont('font-family');
     font-size: 14px;
-    color: map-get($colors, 'black_2');
-    background-color: map-get($colors, 'white');
+    color: getColor('black');
+    background-color: getColor('white');
 }

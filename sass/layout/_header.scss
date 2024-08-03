@@ -4,15 +4,16 @@
 .contacts-list {
     display: flex;
     align-items: center;
-}
+};
 
 .header {
-    background-color: var(--color-body-white);
+    background-color: getColor('black_2');
     padding-top: 24px;
     padding-bottom: 25px;
     position: fixed;
     width: 100%;
     z-index: 1;
+    
    
 }
 
@@ -22,17 +23,17 @@
 }
 
 .header-logo {
-    color: var(--color-body-blue);
+    color: getColor('blue');
     font-size: 26px;
-    font-family: "Raleway";
+    font-family: getFont('second-family');
     font-weight: 700;
     line-height: 1.17;
 }
 
 .header-logo_current_1 {
-    color: var(--color-body-black_2);
+    color: getColor('black-title');
     font-size: 26px;
-    font-family: "Raleway";
+    font-family: getFont('second-family');
     font-weight: 700;
     line-height: 1.17;
     margin-right: 93px;
@@ -44,11 +45,12 @@
 
 .header-link_active{
     font-size: 14px;
-    color: var(--color-body-black);
+    color:  getColor('black');
+    font-family: getFont('second-family');
     font-weight: 500;
     line-height: 1.17;
     position: relative;
-    transition-property: color ;
+    transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-delay: 0;
@@ -66,7 +68,7 @@
     border: none;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: var(--color-body-blue);
+    background-color: getColor('blue');
     display: block;
 
     
@@ -84,7 +86,7 @@
 
  
  .header-link_active:hover {
-    color: var(--color-body-blue);
+    color: getColor('blue');
 } 
 
 
@@ -95,15 +97,15 @@
 
 
 .conacts-item {
-    fill: var(--color-body-gray);
+    fill: getColor('gray-backround');
 }
 
 .conacts-item:hover {
-    fill: #2196F3;
+    fill: getColor('blue');
 }
 
 .header-link_current{
-    color: var(--color-body-gray);
+    color: getColor('gray-backround');
     font-size: 14px;
     font-weight: 500;
     line-height: 1.17;
@@ -118,7 +120,7 @@
 }
 
 .header-link_current:hover {
-    color: var(--color-body-blue);
+    color: getColor('blue');
 }
 
 .header-img {

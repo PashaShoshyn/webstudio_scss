@@ -12,10 +12,11 @@
 
 .features-subject_medium_1 {
     font-size: 14px;
-    color: var(--color-body-black);
+    color: getColor('black');
     font-weight: 700;
     line-height: 1.17;
     margin-bottom: 10px;
+    font-family: getFont('font-family');
 }
 
 .features-subject_medium_1::before {
@@ -31,10 +32,11 @@
 
 .features-subject_medium_2 {
     font-size: 14px;
-    color: var(--color-body-black);
+    color: getColor('black');
     font-weight: 700;
     line-height: 1.17;
     margin-bottom: 10px;
+    font-family: getFont('font-family');
 }
 
 .features-subject_medium_2::before {
@@ -49,10 +51,11 @@
 
 .features-subject_medium_3 {
     font-size: 14px;
-    color: var(--color-body-black);
+    color: getColor(' black');
     font-weight: 700;
     line-height: 1.17;
     margin-bottom: 10px;
+    font-family: getFont('font-family');
 }
 
 .features-subject_medium_3::before {
@@ -62,15 +65,15 @@
     background: url(../images/diagram.svg) 50%/70px no-repeat var(--color-body-white_2);
     width: 270px;
     height: 120px;
-
 }
 
 .features-subject_medium_4 {
     font-size: 14px;
-    color: var(--color-body-black);
+    color: getColor('black');
     font-weight: 700;
     line-height: 1.17;
     margin-bottom: 10px;
+    font-family: getFont('font-family');
 }
 
 .features-subject_medium_4::before {
@@ -88,7 +91,8 @@
 
 .features-tex_medium {
     font-size: 14px;
-    color: var(--color-body-gray);
+    color: getColor('gray-backround');
     font-weight: 400;
     line-height: 1.7;
 }
+

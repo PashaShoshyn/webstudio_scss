@@ -1,56 +1,31 @@
-:root {
-    --color-body-white: #FFFFFF;
 
-    --color-body-black: #212121;
+$colors:(
+    black: #212121,
+    black-title: #000000,
+    black-text: #2F303A,
 
-    --color-body-gray: #757575;
+    gray-backround: #757575,
+    gray-title: #FFFFFF99,
+    gray-text: #AFB1B8,
 
-    --color-body-black_3: #2F303A;
+    white: #FFFFFF,
+    white-backround: #F5F4FA,
 
-    --color-body-blue: #2196F3;
+    blue: #2196F3,
+    blue-bacround:#188ce8
+);
 
-    --color-body-gray_2: #FFFFFF99;
+$fonts:(
+    font-family: Roboto,
+    second-family: Raleway,
+);
 
-    --color-body-gray_3: #AFB1B8;
-
-    --color-body-white_2: #F5F4FA;
-
-    --color-body-black_2: #000000;
-
-
-    $colors:(
-        black: #212121,
-        black_2: #000000,
-        black_3: #2F303A,
-
-        gray: #757575,
-        gray_2: #FFFFFF99,
-        gray_3: #AFB1B8,
-
-        white: #FFFFFF,
-        white_2: #F5F4FA,
-
-        blue: #2196F3,
-    );
-
-    // $colors:(
-    //     white: #FFFFFF,
-    //     white_2: #F5F4FA,
-    // );
-
-    // $colors:( 
-    //     gray: #757575,
-    //     gray_2: #FFFFFF99,
-    //     gray_3: #AFB1B8,
-    // );
-
-    // $colors:(
-    //     blue: #2196F3,
-    // );
-       
-    
-
-
-    --font-family: "Roboto", sans-serif;
-    --second-family: "Raleway", sans-serif;
+@function getFont($key) {
+    @return map-get($fonts, $key);
 }
+// * ================= colors ==================
+@function getColor($key) {
+    @return map-get($colors, $key);
+}
+
+

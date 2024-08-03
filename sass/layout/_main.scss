@@ -14,8 +14,8 @@
     padding-bottom: 6px;
     padding-left: 22px;
     padding-right: 22px;
-    background-color: var(--color-body-white_2);
-    border: var(--color-body-white);
+    background-color: getColor('white-backround');
+    border: getColor('white');
 
     transition-property:  fill, color;
     transition-duration: 250ms;
@@ -34,8 +34,8 @@
     padding-bottom: 6px;
     padding-left: 25px;
     padding-right: 25px;
-    background-color: var(--color-body-white_2);
-    border: var(--color-body-white);
+    background-color:  getColor('white-backround');
+    border:  getColor('white');
 
     transition-property:  color;
     transition-duration: 250ms;
@@ -44,14 +44,14 @@
 }
 
 .main-button:active {
-    background-color: var(--color-body-blue);
-    color: var(--color-body-white);
+    background-color: getColor('blue');
+    color: getColor('white');
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 3px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .main-button-1:active {
-    background-color: var(--color-body-blue);
-    color: var(--color-body-white);
+    background-color:  getColor('blue');
+    color:  getColor('white');
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 3px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -68,7 +68,7 @@
 }
 
 .main-list_items {
-    background-color: var(--color-body-white);
+    background-color: getColor('white');
     width: 370px;
     border: 1px solid #eee;
 
@@ -105,7 +105,7 @@ box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06), 
 }
 
 .main_text {
-    font-family: 'Roboto';
+    font-family:  getFont('font-family');
     position: absolute;
     background: rgba(33, 150, 243, 0.9);
     font-weight: 400;
@@ -128,13 +128,13 @@ box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06), 
     font-weight: 700;
     font-size: 18px;
     line-height: 36px;
-    color: var(--color-body-black);
+    color: getColor('black');
     margin-left: 24px;
     margin-top: 20px;
 }
 
 .main-subtitle {
-    color: var(--color-body-gray);
+    color: getColor('gray-backround');
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;

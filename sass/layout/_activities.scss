@@ -12,7 +12,7 @@
     width: 100%;
     position: absolute;
     bottom: 0px;
-    font-family: 'Roboto';
+    font-family: getFont('font-family');
     padding-top: 27px;
     padding-bottom: 27px;
     font-family: var(--font-family);
@@ -21,13 +21,13 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     text-align: center;
-    color: var(--color-body-white);
+    color: getColor('white');
     background: rgba(47, 48, 58, 0.8);
 }
 
 .section-title {
     font-size: 36px;
-    color: var(--color-body-black);
+    color:  getColor('black');
     font-weight: 700;
     line-height: 1.17;
     text-align: center;

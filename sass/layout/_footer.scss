@@ -1,13 +1,13 @@
 .footer {
-    background-color: var(--color-body-black_3);
+    background-color: getColor('black-text');
     padding-top: 60px;
     padding-bottom: 60px;
 }
 
 .footer-logo {
-    color: var(--color-body-blue);
+    color: getColor('blue');
     font-size: 26px;
-    font-family: "Raleway";
+    font-family: getFont('second-family');
     font-weight: 700;
 }
 
@@ -23,39 +23,39 @@
 }
 
 .footer-logo_current_2 {
-    color: var(--color-body-white);
+    color: getColor('black-text');
     font-size: 26px;
-    font-family: "Raleway";
+    font-family: getFont('second-family');
     font-weight: 700;
     line-height: 1.17;
 }
 
 .footer-link_text {
-    color: var(--color-body-white);
+    color: getColor('white');
     font-size: 14px;
     font-weight: 400;
     line-height: 1.71;
     margin-bottom: 9px;
     margin-top: 20px;
-    font-family: 'Roboto';
+    font-family: getFont('font-family');
 }
 
 .footer-link_subtitle {
     font-size: 14px;
-    color: var(--color-body-gray_2);
+    color: getColor('gray-title');
     font-weight: 400;
     line-height: 1.71;
     margin-top: 9px;
     margin-bottom: 9px;
-    font-family: 'Roboto';
+    font-family: getFont('font-family');
 }
 
 .footer-title {
-    font-family: 'Roboto';
+    font-family: getFont('font-family');
     font-weight: 700;
     font-size: 14px;
     line-height: 16.41px;
-    color: var(--color-body-white);
+    color:  getColor('white');
     margin-bottom: 20px;
 }
 
@@ -77,12 +77,12 @@
 }
 
 .footer-title_2 {
-    font-family: var(--font-family);
+    font-family: getFont('font-family');
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--color-body-white);
+    color: getColor('white');
     margin-bottom: 20px;
 }
 
@@ -102,7 +102,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 40px;
-    fill: var(--color-body-white);
+    fill: getColor('white');
     background-color: #817a7a33;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -117,8 +117,8 @@
 
 .footer-images:hover {
 
-    fill: var(--color-body-white);
-    background-color: var(--color-body-blue);
+    fill: getColor('white');
+    background-color: getColor('blue');
 }
 
 .footer_address {
@@ -126,17 +126,17 @@
 }
 
 .footer_address_text {
-    font-family: var(--font-family);
+    font-family: getFont('font-family');
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--color-body-white);
+    color: getColor('white');
     margin-bottom: 20px;
 }
 
 .footer_input {
-    font-family: var(--font-family);
+    font-family: getFont('font-family');
     font-weight: 400;
     font-size: 16px;
     line-height: 125%;
@@ -156,9 +156,9 @@
 .footer_button {
     border-radius: 4px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    background: #2196f3;
-    border: 1px solid #2196f3;
-    font-family: 'Roboto';
+    background: getColor('blue');
+    border: 1px solid getColor('blue');
+    font-family: getFont('font-family');
     width: 200px;
     height: 50px;
     font-weight: 700;
@@ -170,13 +170,13 @@
 
 .footer_img {
     position: absolute;
-    fill: var(--color-body-white);
+    fill: getColor('white');
     margin-left: 10px;
 
 }
 
 
 .footer_telegram {
-    fill: var(--color-body-white);
+    fill: getColor('white');
     background-size: cover;
 }
