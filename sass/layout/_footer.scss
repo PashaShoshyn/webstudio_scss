@@ -5,7 +5,7 @@
 }
 
 .footer-logo {
-    color: getColor('blue');
+    color: getColor('blue-color');
     font-size: 26px;
     font-family: getFont('second-family');
     font-weight: 700;
@@ -23,7 +23,7 @@
 }
 
 .footer-logo_current_2 {
-    color: getColor('black-text');
+    color: getColor('white-backround');
     font-size: 26px;
     font-family: getFont('second-family');
     font-weight: 700;
@@ -31,7 +31,7 @@
 }
 
 .footer-link_text {
-    color: getColor('white');
+    color: getColor('white-color');
     font-size: 14px;
     font-weight: 400;
     line-height: 1.71;
@@ -55,7 +55,7 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 16.41px;
-    color:  getColor('white');
+    color:  getColor('white-color');
     margin-bottom: 20px;
 }
 
@@ -82,7 +82,7 @@
     font-size: 14px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: getColor('white');
+    color: getColor('white-color');
     margin-bottom: 20px;
 }
 
@@ -102,7 +102,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 40px;
-    fill: getColor('white');
+    fill: getColor('white-color');
     background-color: #817a7a33;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -117,8 +117,8 @@
 
 .footer-images:hover {
 
-    fill: getColor('white');
-    background-color: getColor('blue');
+    fill: getColor('white-color');
+    background-color: getColor('blue-color');
 }
 
 .footer_address {
@@ -131,7 +131,7 @@
     font-size: 14px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: getColor('white');
+    color: getColor('white-color');
     margin-bottom: 20px;
 }
 
@@ -156,8 +156,8 @@
 .footer_button {
     border-radius: 4px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    background: getColor('blue');
-    border: 1px solid getColor('blue');
+    background: getColor('blue-color');
+    border: 1px solid getColor('blue-color');
     font-family: getFont('font-family');
     width: 200px;
     height: 50px;
@@ -165,18 +165,18 @@
     font-size: 16px;
     line-height: 187%;
     letter-spacing: 0.06em;
-    color: var(--color-body-white);
+    color: getColor('white-color');
 }
 
 .footer_img {
     position: absolute;
-    fill: getColor('white');
+    fill: getColor('white-color');
     margin-left: 10px;
 
 }
 
 
 .footer_telegram {
-    fill: getColor('white');
+    fill: getColor('white-color');
     background-size: cover;
 }

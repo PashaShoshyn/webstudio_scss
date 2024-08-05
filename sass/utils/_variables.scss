@@ -1,19 +1,23 @@
 
-$colors:(
-    black: #212121,
+
+
+$colors: (
+    black-color: #212121,
     black-title: #000000,
     black-text: #2F303A,
+    
 
     gray-backround: #757575,
     gray-title: #FFFFFF99,
     gray-text: #AFB1B8,
-
-    white: #FFFFFF,
+    
+    white-color :#FFFFFF,
     white-backround: #F5F4FA,
 
-    blue: #2196F3,
-    blue-bacround:#188ce8
+    blue-color: #2196F3,
+    blue-bacround:#188ce8,
 );
+
 
 $fonts:(
     font-family: Roboto,

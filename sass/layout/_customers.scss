@@ -17,7 +17,7 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-delay: 0;
-    color: getColor('black');
+    color: getColor('black-color');
     
 }
 
@@ -31,7 +31,7 @@
     font-size: 36px;
     line-height: 42.19px;
     margin-bottom: 50px;
-    color: getColor('black');
+    color: getColor('black-color');
 }
 
 
@@ -48,7 +48,7 @@
 }
 
 .customers-item:hover {
-    outline: solid  getColor('gray-blue') 1px;
+    outline: solid  getColor('blue-color') 1px;
 }
 
 .customers-li:not(:last-child) {
@@ -74,6 +74,6 @@
 }
 
 .customers-list:hover {
-    outline: solid map-get($colors, 'blue') 1px;
-    fill: getColor('gray-blue');
+    outline: solid getColor('blue-color') 1px;
+    fill: getColor('blue-color');
 }

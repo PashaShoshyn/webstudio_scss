@@ -7,7 +7,7 @@
 };
 
 .header {
-    background-color: getColor('black_2');
+    background-color: getColor('white-color');
     padding-top: 24px;
     padding-bottom: 25px;
     position: fixed;
@@ -23,7 +23,7 @@
 }
 
 .header-logo {
-    color: getColor('blue');
+    color: getColor('blue-color');
     font-size: 26px;
     font-family: getFont('second-family');
     font-weight: 700;
@@ -31,7 +31,7 @@
 }
 
 .header-logo_current_1 {
-    color: getColor('black-title');
+    color: getColor('black-text'); 
     font-size: 26px;
     font-family: getFont('second-family');
     font-weight: 700;
@@ -45,7 +45,7 @@
 
 .header-link_active{
     font-size: 14px;
-    color:  getColor('black');
+    color:  getColor('black-color');
     font-family: getFont('second-family');
     font-weight: 500;
     line-height: 1.17;
@@ -68,7 +68,7 @@
     border: none;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: getColor('blue');
+    background-color: getColor('blue-color');
     display: block;
 
     

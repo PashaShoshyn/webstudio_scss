@@ -12,7 +12,7 @@
 
 .features-subject_medium_1 {
     font-size: 14px;
-    color: getColor('black');
+    color: getColor('black-color');
     font-weight: 700;
     line-height: 1.17;
     margin-bottom: 10px;
@@ -23,7 +23,7 @@
     display: block;
     content: "";
     margin-bottom: 30px;
-    background: url(../images/antenna.svg) 50%/70px no-repeat var(--color-body-white_2);
+    background: url(../images/antenna.svg) 50%/70px no-repeat getColor('white-backround');
     width: 270px;
     height: 120px;
 
@@ -32,7 +32,7 @@
 
 .features-subject_medium_2 {
     font-size: 14px;
-    color: getColor('black');
+    color: getColor('black-color');
     font-weight: 700;
     line-height: 1.17;
     margin-bottom: 10px;
@@ -43,7 +43,7 @@
     display: block;
     content: "";
     margin-bottom: 30px;
-    background: url(../images/clock.svg) 50%/70px no-repeat var(--color-body-white_2);
+    background: url(../images/clock.svg) 50%/70px no-repeat getColor('white-backround');
     width: 270px;
     height: 120px;
 
@@ -51,7 +51,7 @@
 
 .features-subject_medium_3 {
     font-size: 14px;
-    color: getColor(' black');
+    color: getColor('black-color');
     font-weight: 700;
     line-height: 1.17;
     margin-bottom: 10px;
@@ -62,14 +62,14 @@
     display: block;
     content: "";
     margin-bottom: 30px;
-    background: url(../images/diagram.svg) 50%/70px no-repeat var(--color-body-white_2);
+    background: url(../images/diagram.svg) 50%/70px no-repeat getColor('white-backround');
     width: 270px;
     height: 120px;
 }
 
 .features-subject_medium_4 {
     font-size: 14px;
-    color: getColor('black');
+    color: getColor('black-color');
     font-weight: 700;
     line-height: 1.17;
     margin-bottom: 10px;
@@ -80,7 +80,7 @@
     display: block;
     content: "";
     margin-bottom: 30px;
-    background: url(../images/astronaut.svg) 50%/70px no-repeat var(--color-body-white_2);
+    background: url(../images/astronaut.svg) 50%/70px no-repeat getColor('white-backround');
     width: 270px;
     height: 120px;
 
