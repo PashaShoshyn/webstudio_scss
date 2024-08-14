@@ -70,3 +70,14 @@
     fill: getColor('white-color');
     background-color: getColor('blue-color');
 }
+
+
+
+.team__div--title{
+    font-size: 36px;
+    color: getColor('black-color');
+    font-weight: 700;
+    line-height: 1.17;
+    text-align: center;
+    margin-bottom: 50px;
+}

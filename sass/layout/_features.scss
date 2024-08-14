@@ -2,15 +2,15 @@
     padding-top: 94px;
 }
 
-.features-items {
+.features--list {
     display: flex;
 }
 
-.features-list:not(:last-child) {
+.features__list--item:not(:last-child) {
     margin-right: 30px;
 }
 
-.features-subject_medium_1 {
+.features__item--title_1 {
     font-size: 14px;
     color: getColor('black-color');
     font-weight: 700;
@@ -19,27 +19,44 @@
     font-family: getFont('font-family');
 }
 
-.features-subject_medium_1::before {
+.features__item--title_2 {
+    font-size: 14px;
+    color: getColor('black-color');
+    font-weight: 700;
+    line-height: 1.17;
+    margin-bottom: 10px;
+    font-family: getFont('font-family');
+}
+
+.features__item--title_3 {
+    font-size: 14px;
+    color: getColor('black-color');
+    font-weight: 700;
+    line-height: 1.17;
+    margin-bottom: 10px;
+    font-family: getFont('font-family');
+}
+
+.features__item--title_4 {
+    font-size: 14px;
+    color: getColor('black-color');
+    font-weight: 700;
+    line-height: 1.17;
+    margin-bottom: 10px;
+    font-family: getFont('font-family');
+}
+
+
+.features__item--title_1::before {
     display: block;
     content: "";
     margin-bottom: 30px;
     background: url(../images/antenna.svg) 50%/70px no-repeat getColor('white-backround');
     width: 270px;
     height: 120px;
-
 }
 
-
-.features-subject_medium_2 {
-    font-size: 14px;
-    color: getColor('black-color');
-    font-weight: 700;
-    line-height: 1.17;
-    margin-bottom: 10px;
-    font-family: getFont('font-family');
-}
-
-.features-subject_medium_2::before {
+.features__item--title_2::before {
     display: block;
     content: "";
     margin-bottom: 30px;
@@ -49,16 +66,7 @@
 
 }
 
-.features-subject_medium_3 {
-    font-size: 14px;
-    color: getColor('black-color');
-    font-weight: 700;
-    line-height: 1.17;
-    margin-bottom: 10px;
-    font-family: getFont('font-family');
-}
-
-.features-subject_medium_3::before {
+.features__item--title_3::before {
     display: block;
     content: "";
     margin-bottom: 30px;
@@ -67,16 +75,7 @@
     height: 120px;
 }
 
-.features-subject_medium_4 {
-    font-size: 14px;
-    color: getColor('black-color');
-    font-weight: 700;
-    line-height: 1.17;
-    margin-bottom: 10px;
-    font-family: getFont('font-family');
-}
-
-.features-subject_medium_4::before {
+.features__item--title_4::before {
     display: block;
     content: "";
     margin-bottom: 30px;
@@ -87,9 +86,7 @@
 }
 
 
-
-
-.features-tex_medium {
+.features__item--text {
     font-size: 14px;
     color: getColor('gray-backround');
     font-weight: 400;

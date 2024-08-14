@@ -13,13 +13,16 @@
 
 .footer-list {
     display: block;
-    margin-right: 70px;
+}
+
+.footer-div{
+    margin-left: 70px;
 }
 
 .footer-link {
     display: flex;
     flex-direction: column;
-    margin-right: 70px;
+    margin-right: 10px;
 }
 
 .footer-logo_current_2 {

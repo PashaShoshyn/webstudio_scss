@@ -1,5 +1,5 @@
 .header-flex,
-.header-navigation,
+.header-nav,
 .header-list,
 .contacts-list {
     display: flex;
@@ -18,11 +18,11 @@
 }
 
 
-.header-navigation {
+.header-nav {
     margin-right: 318px;
 }
 
-.header-logo {
+.header__nav--link {
     color: getColor('blue-color');
     font-size: 26px;
     font-family: getFont('second-family');
@@ -30,7 +30,7 @@
     line-height: 1.17;
 }
 
-.header-logo_current_1 {
+.nav__link--item {
     color: getColor('black-text'); 
     font-size: 26px;
     font-family: getFont('second-family');
@@ -39,11 +39,11 @@
     margin-right: 93px;
 }
 
-.header_item:not(:last-child) {
+.nav__list--items:not(:last-child) {
     margin-right: 50px
 }
 
-.header-link_active{
+.header__link--active{
     font-size: 14px;
     color:  getColor('black-color');
     font-family: getFont('second-family');
@@ -85,26 +85,26 @@
 
 
  
- .header-link_active:hover {
+ .header__link--active:hover {
     color: getColor('blue');
 } 
 
 
 
-.conacts-item:not(:last-child) {
+.header__lists--item:not(:last-child) {
     margin-right: 50px;
 }
 
 
-.conacts-item {
+.header__lists--item {
     fill: getColor('gray-backround');
 }
 
-.conacts-item:hover {
+.header__lists--item:hover {
     fill: getColor('blue');
 }
 
-.header-link_current{
+.header-item__link{
     color: getColor('gray-backround');
     font-size: 14px;
     font-weight: 500;
@@ -119,11 +119,11 @@
 
 }
 
-.header-link_current:hover {
+.header__lists--item:hover {
     color: getColor('blue');
 }
 
-.header-img {
+.header__link--svg {
     margin-right: 10px;
 }
 
@@ -132,3 +132,4 @@
 .main {
     padding-top: 80px;
 }
+
