@@ -11,7 +11,7 @@
 }
 
 
-.customers-lists {
+.customers--lists {
     display: flex;
     transition-property:  border, fill;
     transition-duration: 250ms;
@@ -25,7 +25,7 @@
  
 
 
-.customers-title {
+.customers__div--title {
     font-family: getFont('font-family');
     font-weight: 700;
     font-size: 36px;
@@ -47,16 +47,16 @@
 
 }
 
-.customers-item:hover {
+.customers__lists--item:hover {
     outline: solid  getColor('blue-color') 1px;
 }
 
-.customers-li:not(:last-child) {
+.customers__lists--item:not(:last-child) {
     margin-right: 30px;
 
 }
 
-.customers-list {
+.customers__lists--link {
     outline: solid  getColor('gray-text')  1px;
     border-radius: 4px;
     width: 170px;
@@ -73,7 +73,7 @@
     transition-delay: 0;
 }
 
-.customers-list:hover {
+.customers__lists--link:hover {
     outline: solid getColor('blue-color') 1px;
     fill: getColor('blue-color');
 }

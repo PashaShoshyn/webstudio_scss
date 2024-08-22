@@ -8,7 +8,7 @@
     position: relative;
 }
 
-.activities-text {
+.activities__list--text {
     width: 100%;
     position: absolute;
     bottom: 0px;
@@ -26,7 +26,7 @@
 
 .activities__div--title {
     font-size: 36px;
-    color:  getColor('black-color');
+    color: getColor('black-color');
     font-weight: 700;
     line-height: 1.17;
     text-align: center;

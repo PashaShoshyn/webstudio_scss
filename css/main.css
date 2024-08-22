@@ -69,7 +69,7 @@ body {
 
 .header-flex,
 .header-nav,
-.header-list,
+.nav-list,
 .contacts-list {
   display: flex;
   align-items: center;
@@ -109,7 +109,7 @@ body {
   margin-right: 50px;
 }
 
-.header__link--active {
+.nav__list--link {
   font-size: 14px;
   color: #212121;
   font-family: Raleway;
@@ -140,15 +140,15 @@ body {
   transition-delay: 0;
 }
 
-.header__lists--item:not(:last-child) {
+.nav__lists--item:not(:last-child) {
   margin-right: 50px;
 }
 
-.header__lists--item {
+.nav__lists--item {
   fill: #757575;
 }
 
-.header-item__link {
+.nav__lists--link {
   color: #757575;
   font-size: 14px;
   font-weight: 500;
@@ -161,7 +161,7 @@ body {
   transition-delay: 0;
 }
 
-.header__link--svg {
+.nav__lists--svg {
   margin-right: 10px;
 }
 
@@ -218,7 +218,7 @@ body {
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modal {
+.backdrop.is-hidden .div--modal {
   transform: translate(-50%, -50%) scale(0);
 }
 
@@ -231,7 +231,7 @@ body {
   overflow: hidden;
 }
 
-.modal {
+.div--modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -242,7 +242,7 @@ body {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
-.hero__div--svg {
+.modal__div--svg {
   border-radius: 100%;
   fill: #000000;
   outline: 1px auto rgba(0, 0, 0, 0.1);
@@ -252,7 +252,7 @@ body {
   margin-top: 8px;
 }
 
-.hero__div--svg:hover {
+.modal__div--svg:hover {
   fill: #2196F3;
 }
 
@@ -262,7 +262,7 @@ body {
   z-index: 2;
 }
 
-.hero__div--title {
+.modal__div--title {
   font-family: Roboto;
   font-weight: 700;
   font-size: 20px;
@@ -282,7 +282,7 @@ body {
   margin-left: 40px;
 }
 
-.hero__form--input {
+.form__div--imput {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   width: 448px;
@@ -293,23 +293,23 @@ body {
   padding-top: 2px;
 }
 
-.hero-div {
+.form-div {
   position: relative;
 }
 
-.hero__form--input:focus {
+.form__div--imput:focus {
   outline: 1px solid #2196F3;
 }
 
-.hero__form--input:focus + .hero__form--svg {
+.form__div--imput:focus + .form__div--svg {
   fill: #2196F3;
 }
 
-.hero-div:focus {
+.form-div:focus {
   fill: #2196F3;
 }
 
-.hero__form--svg {
+.form__div--svg {
   position: absolute;
   right: 458px;
   top: 11px;
@@ -393,7 +393,7 @@ body {
   margin-right: 30px;
 }
 
-.features__item--title_1 {
+.features__list--title_1 {
   font-size: 14px;
   color: #212121;
   font-weight: 700;
@@ -402,7 +402,7 @@ body {
   font-family: Roboto;
 }
 
-.features__item--title_2 {
+.features__list--title_2 {
   font-size: 14px;
   color: #212121;
   font-weight: 700;
@@ -411,7 +411,7 @@ body {
   font-family: Roboto;
 }
 
-.features__item--title_3 {
+.features__list--title_3 {
   font-size: 14px;
   color: #212121;
   font-weight: 700;
@@ -420,7 +420,7 @@ body {
   font-family: Roboto;
 }
 
-.features__item--title_4 {
+.features__list--title_4 {
   font-size: 14px;
   color: #212121;
   font-weight: 700;
@@ -429,7 +429,7 @@ body {
   font-family: Roboto;
 }
 
-.features__item--title_1::before {
+.features__list--title_1::before {
   display: block;
   content: "";
   margin-bottom: 30px;
@@ -438,7 +438,7 @@ body {
   height: 120px;
 }
 
-.features__item--title_2::before {
+.features__list--title_2::before {
   display: block;
   content: "";
   margin-bottom: 30px;
@@ -447,7 +447,7 @@ body {
   height: 120px;
 }
 
-.features__item--title_3::before {
+.features__list--title_3::before {
   display: block;
   content: "";
   margin-bottom: 30px;
@@ -456,7 +456,7 @@ body {
   height: 120px;
 }
 
-.features__item--title_4::before {
+.features__list--title_4::before {
   display: block;
   content: "";
   margin-bottom: 30px;
@@ -465,7 +465,7 @@ body {
   height: 120px;
 }
 
-.features__item--text {
+.features__list--text {
   font-size: 14px;
   color: #757575;
   font-weight: 400;
@@ -481,7 +481,7 @@ body {
   position: relative;
 }
 
-.activities-text {
+.activities__list--text {
   width: 100%;
   position: absolute;
   bottom: 0px;
@@ -517,12 +517,12 @@ body {
   padding-bottom: 94px;
 }
 
-.team-list {
+.team--list {
   display: flex;
   justify-content: space-between;
 }
 
-.team-item {
+.team__list--item {
   background-color: #FFFFFF;
   padding-bottom: 30px;
   display: flex;
@@ -536,7 +536,7 @@ body {
   margin-right: 10px;
 }
 
-.team-title_small {
+.team__list--title {
   color: #212121;
   font-size: 16px;
   font-weight: 500;
@@ -545,7 +545,7 @@ body {
   margin-top: 30px;
 }
 
-.team-text {
+.team__list--text {
   color: #757575;
   font-size: 16px;
   font-weight: 400;
@@ -557,7 +557,7 @@ body {
   margin-top: 16px;
 }
 
-.team-images {
+.team__lists--link {
   width: 44px;
   height: 44px;
   display: flex;
@@ -571,11 +571,11 @@ body {
   transition-delay: 0;
 }
 
-.team-images:not(:last-child) {
+.team__lists--link:not(:last-child) {
   margin-right: 10px;
 }
 
-.team-images:hover {
+.team__lists--link:hover {
   fill: #FFFFFF;
   background-color: #2196F3;
 }
@@ -600,7 +600,7 @@ body {
   align-items: center;
 }
 
-.customers-lists {
+.customers--lists {
   display: flex;
   transition-property: border, fill;
   transition-duration: 250ms;
@@ -609,7 +609,7 @@ body {
   color: #212121;
 }
 
-.customers-title {
+.customers__div--title {
   font-family: Roboto;
   font-weight: 700;
   font-size: 36px;
@@ -629,15 +629,15 @@ body {
   border-radius: 4px;
 }
 
-.customers-item:hover {
+.customers__lists--item:hover {
   outline: solid #2196F3 1px;
 }
 
-.customers-li:not(:last-child) {
+.customers__lists--item:not(:last-child) {
   margin-right: 30px;
 }
 
-.customers-list {
+.customers__lists--link {
   outline: solid #AFB1B8 1px;
   border-radius: 4px;
   width: 170px;
@@ -653,7 +653,7 @@ body {
   transition-delay: 0;
 }
 
-.customers-list:hover {
+.customers__lists--link:hover {
   outline: solid #2196F3 1px;
   fill: #2196F3;
 }
@@ -664,14 +664,14 @@ body {
   padding-bottom: 60px;
 }
 
-.footer-logo {
+.footer__address--link {
   color: #2196F3;
   font-size: 26px;
   font-family: Raleway;
   font-weight: 700;
 }
 
-.footer-list {
+.footer--address {
   display: block;
 }
 
@@ -679,13 +679,13 @@ body {
   margin-left: 70px;
 }
 
-.footer-link {
+.footer__lists--item {
   display: flex;
   flex-direction: column;
   margin-right: 10px;
 }
 
-.footer-logo_current_2 {
+.footer__address--span {
   color: #F5F4FA;
   font-size: 26px;
   font-family: Raleway;
@@ -693,7 +693,7 @@ body {
   line-height: 1.17;
 }
 
-.footer-link_text {
+.footer__address--item {
   color: #FFFFFF;
   font-size: 14px;
   font-weight: 400;
@@ -703,7 +703,7 @@ body {
   font-family: Roboto;
 }
 
-.footer-link_subtitle {
+.address__list--link {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.6);
   font-weight: 400;
@@ -722,7 +722,7 @@ body {
   margin-bottom: 20px;
 }
 
-.footer-link {
+.footer__lists--item {
   display: flex;
 }
 
@@ -738,7 +738,7 @@ body {
   display: flex;
 }
 
-.footer-title_2 {
+.footer__div--title {
   font-family: Roboto;
   font-weight: 700;
   font-size: 14px;
@@ -752,12 +752,12 @@ body {
   display: flex;
 }
 
-.footer-custormes {
+.footer-div {
   margin-top: 12px;
   margin-right: 93px;
 }
 
-.footer-images {
+.footer__lists--images {
   width: 44px;
   height: 44px;
   display: flex;
@@ -770,11 +770,11 @@ body {
   animation: fade-in 2s ease-in-out;
 }
 
-.footer-images:not(:last-child) {
+.footer__lists--images:not(:last-child) {
   margin-right: 10px;
 }
 
-.footer-images:hover {
+.footer__lists--images:hover {
   fill: #FFFFFF;
   background-color: #2196F3;
 }
@@ -783,7 +783,7 @@ body {
   margin-top: 12px;
 }
 
-.footer_address_text {
+.footer--title {
   font-family: Roboto;
   font-weight: 700;
   font-size: 14px;
@@ -793,7 +793,7 @@ body {
   margin-bottom: 20px;
 }
 
-.footer_input {
+.footer__form--input {
   font-family: Roboto;
   font-weight: 400;
   font-size: 16px;
@@ -811,7 +811,7 @@ body {
   padding-bottom: 15px;
 }
 
-.footer_button {
+.footer__form--button {
   border-radius: 4px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: #2196F3;
@@ -826,13 +826,13 @@ body {
   color: #FFFFFF;
 }
 
-.footer_img {
+.footer__form--svg {
   position: absolute;
   fill: #FFFFFF;
   margin-left: 10px;
 }
 
-.footer_telegram {
+.footer__form--telegram {
   fill: #FFFFFF;
   background-size: cover;
 }

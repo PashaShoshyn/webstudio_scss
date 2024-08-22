@@ -55,7 +55,7 @@
     pointer-events: none;
 }
 
-.backdrop.is-hidden .modal{
+.backdrop.is-hidden .div--modal{
     transform: translate(-50%, -50%) scale(0);
 
 }
@@ -69,7 +69,7 @@
     overflow: hidden;
 }
 
-.modal {
+.div--modal {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -83,7 +83,7 @@
 
 
 
-.hero__div--svg {
+.modal__div--svg {
     border-radius: 100%;
     fill: getColor('black-title');
     outline: 1px auto rgba(0, 0, 0, 0.1);
@@ -93,7 +93,7 @@
     margin-top: 8px;
 }
 
-.hero__div--svg:hover {
+.modal__div--svg:hover {
     fill: getColor('blue-color');
 }
 
@@ -106,7 +106,7 @@
 
 
 
-.hero__div--title {
+.modal__div--title {
     font-family: getFont('font-family');
     font-weight: 700;
     font-size: 20px;
@@ -128,7 +128,7 @@
     margin-left: 40px;
 }
 
-.hero__form--input {
+.form__div--imput {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     width: 448px;
@@ -139,24 +139,24 @@
     padding-top: 2px;
 }
 
-.hero-div {
+.form-div {
     position: relative;
 }
 
-.hero__form--input:focus {
+.form__div--imput:focus {
     outline: 1px solid getColor('blue-color');
 }
 
-.hero__form--input:focus+.hero__form--svg {
+.form__div--imput:focus+.form__div--svg {
     fill: getColor('blue-color');
 }
 
 
-.hero-div:focus {
+.form-div:focus {
     fill: getColor('blue-color');
 }
 
-.hero__form--svg {
+.form__div--svg {
     position: absolute;
     right: 458px;
     top: 11px;
