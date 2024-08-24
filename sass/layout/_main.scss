@@ -5,59 +5,45 @@
     margin-top: 64px;
 }
 
-.main-button {
-    border-radius: 4px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    padding-left: 22px;
-    padding-right: 22px;
-    background-color: getColor('white-backround');
-    border: getColor('white-color');
-
-    transition-property:  fill, color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
-}
-
-
-
+.main-button,
 .main-button-1 {
     border-radius: 4px;
     font-weight: 500;
     font-size: 16px;
     line-height: 26px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    padding-left: 25px;
-    padding-right: 25px;
-    background-color:  getColor('white-backround');
-    border:  getColor('white-color');
-
-    transition-property:  color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+    padding: 6px 22px;
+    background-color: getColor('white-backround');
+    border: getColor('white-color');
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.main-button:active {
-    background-color: getColor('blue-color');
-    color: getColor('white-color');
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 3px 1px 0 rgba(0, 0, 0, 0.1);
+.main-button {
+    padding: 6px 22px;
+
+    &:active {
+        background-color: getColor('blue-color');
+        color: getColor('white-color');
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12),
+                    0 1px 2px rgba(0, 0, 0, 0.08),
+                    0 3px 1px rgba(0, 0, 0, 0.1);
+    }
 }
 
-.main-button-1:active {
-    background-color:  getColor('blue-color');
-    color:  getColor('white-color');
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 3px 1px 0 rgba(0, 0, 0, 0.1);
-}
+.main-button-1 {
+    padding: 6px 25px;
 
+    &:active {
+        background-color: getColor('blue-color');
+        color: getColor('white-color');
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12),
+                    0 1px 2px rgba(0, 0, 0, 0.08),
+                    0 3px 1px rgba(0, 0, 0, 0.1);
+    }
+}
 
 .main-list-item {
-    margin: 0px 8px;
+    margin: 0 8px;
 }
 
 .main-section {
@@ -71,41 +57,31 @@
     background-color: getColor('white-color');
     width: 370px;
     border: 1px solid #eee;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    transition-property: 250ms;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+    &:hover {
+        box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16),
+                    0 4px 4px rgba(0, 0, 0, 0.06),
+                    0 1px 1px rgba(0, 0, 0, 0.12);
+    }
+
+    &:nth-child(n+4) {
+        margin-top: 30px;
+    }
+
+    &:hover .main_text {
+        transform: translateY(-100%);
+    }
 }
-
-.main-list_items:hover{
-box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06), 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-}
-
-
-
-
-.main-list_items:nth-child(n+4) {
-    margin-top: 30px;
-}
-
-
-
-
 
 .containet_text {
     position: relative;
     width: 100%;
     overflow: hidden;
-
-}
-
-.main-list_items:hover .main_text {
-    transform: translateY(-100%);
 }
 
 .main_text {
-    font-family:  getFont('font-family');
+    font-family: getFont('font-family');
     position: absolute;
     background: rgba(33, 150, 243, 0.9);
     font-weight: 400;
@@ -114,23 +90,15 @@ box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06), 
     letter-spacing: 0.03em;
     color: #fff;
     padding: 63px 24px;
-
-    
-    transition-property: 250ms;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-
 
 .main-title-big {
     font-weight: 700;
     font-size: 18px;
     line-height: 36px;
     color: getColor('black-color');
-    margin-left: 24px;
-    margin-top: 20px;
+    margin: 20px 0 0 24px;
 }
 
 .main-subtitle {
@@ -138,7 +106,5 @@ box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06), 
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
-    margin-bottom: 20px;
-    margin-left: 24px;
-    margin-top: 4px;
+    margin: 4px 0 20px 24px;
 }

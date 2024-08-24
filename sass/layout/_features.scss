@@ -1,95 +1,54 @@
 .features {
     padding-top: 94px;
+
+    &--list {
+        display: flex;
+
+        &-item {
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+
+        &-title {
+            font-size: 14px;
+            color: getColor('black-color');
+            font-weight: 700;
+            line-height: 1.17;
+            margin-bottom: 10px;
+            font-family: getFont('font-family');
+
+            &::before {
+                display: block;
+                content: "";
+                margin-bottom: 30px;
+                width: 270px;
+                height: 120px;
+                background: 50%/70px no-repeat getColor('white-backround');
+            }
+        }
+
+        &-title_1::before {
+            background-image: url(../images/antenna.svg);
+        }
+
+        &-title_2::before {
+            background-image: url(../images/clock.svg);
+        }
+
+        &-title_3::before {
+            background-image: url(../images/diagram.svg);
+        }
+
+        &-title_4::before {
+            background-image: url(../images/astronaut.svg);
+        }
+
+        &-text {
+            font-size: 14px;
+            color: getColor('gray-backround');
+            font-weight: 400;
+            line-height: 1.7;
+        }
+    }
 }
-
-.features--list {
-    display: flex;
-}
-
-.features__list--item:not(:last-child) {
-    margin-right: 30px;
-}
-
-.features__list--title_1 {
-    font-size: 14px;
-    color: getColor('black-color');
-    font-weight: 700;
-    line-height: 1.17;
-    margin-bottom: 10px;
-    font-family: getFont('font-family');
-}
-
-.features__list--title_2 {
-    font-size: 14px;
-    color: getColor('black-color');
-    font-weight: 700;
-    line-height: 1.17;
-    margin-bottom: 10px;
-    font-family: getFont('font-family');
-}
-
-.features__list--title_3 {
-    font-size: 14px;
-    color: getColor('black-color');
-    font-weight: 700;
-    line-height: 1.17;
-    margin-bottom: 10px;
-    font-family: getFont('font-family');
-}
-
-.features__list--title_4 {
-    font-size: 14px;
-    color: getColor('black-color');
-    font-weight: 700;
-    line-height: 1.17;
-    margin-bottom: 10px;
-    font-family: getFont('font-family');
-}
-
-
-.features__list--title_1::before {
-    display: block;
-    content: "";
-    margin-bottom: 30px;
-    background: url(../images/antenna.svg) 50%/70px no-repeat getColor('white-backround');
-    width: 270px;
-    height: 120px;
-}
-
-.features__list--title_2::before {
-    display: block;
-    content: "";
-    margin-bottom: 30px;
-    background: url(../images/clock.svg) 50%/70px no-repeat getColor('white-backround');
-    width: 270px;
-    height: 120px;
-
-}
-
-.features__list--title_3::before {
-    display: block;
-    content: "";
-    margin-bottom: 30px;
-    background: url(../images/diagram.svg) 50%/70px no-repeat getColor('white-backround');
-    width: 270px;
-    height: 120px;
-}
-
-.features__list--title_4::before {
-    display: block;
-    content: "";
-    margin-bottom: 30px;
-    background: url(../images/astronaut.svg) 50%/70px no-repeat getColor('white-backround');
-    width: 270px;
-    height: 120px;
-
-}
-
-
-.features__list--text {
-    font-size: 14px;
-    color: getColor('gray-backround');
-    font-weight: 400;
-    line-height: 1.7;
-}
-

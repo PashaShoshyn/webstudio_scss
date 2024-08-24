@@ -1,44 +1,109 @@
-
 .hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    background-image: linear-gradient(to right,
-            #2F303A66,
-            #2F303A66),
-        url('../images/bacround.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 200px 0;
+    background: linear-gradient(to right, #2F303A66, #2F303A66),
+                url('../images/bacround.png') no-repeat center/cover;
+
+    &__div--text {
+        font-size: 44px;
+        color: getColor('white-color');
+        font-weight: 900;
+        line-height: 1.3;
+        width: 696px;
+        text-align: center;
+        margin: 0 auto 30px;
+    }
+
+    &__div--button {
+        display: block;
+        background-color: getColor('blue-color');
+        font-size: 16px;
+        color: getColor('white-color');
+        font-weight: 700;
+        line-height: 1.8;
+        margin: 0 auto;
+        padding: 10px 32px;
+        border-radius: 4px;
+        border: 1px solid getColor('blue-color');
+    }
+
+    &-form {
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+
+        &--text {
+            font-family: getFont('font-family');
+            font-weight: 400;
+            font-size: 12px;
+            color: getColor('gray-backround');
+            margin: 0 0 4px 40px;
+        }
+
+        &--input {
+            border: 1px solid rgba(33, 33, 33, 0.2);
+            border-radius: 4px;
+            width: 448px;
+            height: 40px;
+            margin: 0 0 10px 40px;
+            padding: 2px 0 2px 50px;
+
+            &:focus {
+                outline: 1px solid getColor('blue-color');
+            }
+        }
+
+        &--comment {
+            border: 1px solid rgba(33, 33, 33, 0.2);
+            border-radius: 4px;
+            width: 448px;
+            height: 120px;
+            margin: 0 0 20px 40px;
+            padding: 16px 12px;
+            resize: none;
+
+            &::placeholder {
+                font-family: 'Roboto';
+                font-weight: 400;
+                font-size: 12px;
+                color: rgba(117, 117, 117, 0.5);
+            }
+
+            &:focus {
+                outline: 1px solid var(--color-body-blue);
+            }
+        }
+
+        &--label {
+            margin: 0 0 40px 54px;
+            font-family: 'Roboto';
+            font-weight: 400;
+            font-size: 14px;
+            color: #757575;
+        }
+
+        &--link {
+            font-family: getFont('font-family');
+            font-weight: 400;
+            font-size: 14px;
+            color: getColor('blue-color');
+            text-decoration: underline;
+        }
+
+        &--button {
+            border-radius: 4px;
+            width: 200px;
+            height: 50px;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+            background: getColor('blue-background');
+            border: 1px solid getColor('blue-background');
+            font-family: getFont('font-family');
+            font-weight: 700;
+            font-size: 16px;
+            color: #fff;
+            margin: 0 auto 40px;
+        }
+    }
 }
-
-.hero__div--text {
-    font-size: 44px;
-    color: getColor('white-color');
-    font-weight: 900;
-    line-height: 1.3;
-    width: 696px;
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 30px;
-
-    
-}
-
-.hero__div--button {
-    display: block;
-    background-color: getColor('blue-color');
-    font-size: 16px;
-    color: getColor('white-color');
-    font-weight: 700;
-    line-height: 1.8;
-    margin: 0 auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 32px;
-    padding-right: 32px;
-    border-radius: 4px;
-    border: 1px solid getColor('blue-color');
-}
-
 
 .backdrop {
     position: fixed;
@@ -47,26 +112,15 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-}
 
+    &.is-hidden {
+        opacity: 0;
+        pointer-events: none;
 
-.backdrop .is-hidden{
-    opacity: 0;
-    pointer-events: none;
-}
-
-.backdrop.is-hidden .div--modal{
-    transform: translate(-50%, -50%) scale(0);
-
-}
-
-.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.no-scroll {
-    overflow: hidden;
+        .div--modal {
+            transform: translate(-50%, -50%) scale(0);
+        }
+    }
 }
 
 .div--modal {
@@ -78,157 +132,26 @@
     background-color: getColor('white-color');
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms,
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1)  250ms;
-}
+                opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 
+    .modal__div--svg {
+        border-radius: 100%;
+        fill: getColor('black-title');
+        outline: 1px auto rgba(0, 0, 0, 0.1);
+        padding: 6px;
+        margin: 8px 8px 0 auto;
+        
+        &:hover {
+            fill: getColor('blue-color');
+        }
+    }
 
-
-.modal__div--svg {
-    border-radius: 100%;
-    fill: getColor('black-title');
-    outline: 1px auto rgba(0, 0, 0, 0.1);
-    padding: 6px;
-    margin-left: 490px;
-    margin-right: 8px;
-    margin-top: 8px;
-}
-
-.modal__div--svg:hover {
-    fill: getColor('blue-color');
-}
-
-.hero-form {
-    display: flex;
-    flex-direction: column;
-    z-index: 2;
-}
-
-
-
-
-.modal__div--title {
-    font-family: getFont('font-family');
-    font-weight: 700;
-    font-size: 20px;
-    letter-spacing: 0.03em;
-    text-align: center;
-    color: getColor('black-color');
-    margin-bottom: 12px;
-
-}
-
-
-.hero__form--text {
-    font-family: getFont('font-family');
-    font-weight: 400;
-    font-size: 12px;
-    letter-spacing: 0.01em;
-    color: getColor('gray-backround');
-    margin-bottom: 4px;
-    margin-left: 40px;
-}
-
-.form__div--imput {
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    width: 448px;
-    height: 40px;
-    margin-bottom: 10px;
-    margin-left: 40px;
-    padding-left: 50px;
-    padding-top: 2px;
-}
-
-.form-div {
-    position: relative;
-}
-
-.form__div--imput:focus {
-    outline: 1px solid getColor('blue-color');
-}
-
-.form__div--imput:focus+.form__div--svg {
-    fill: getColor('blue-color');
-}
-
-
-.form-div:focus {
-    fill: getColor('blue-color');
-}
-
-.form__div--svg {
-    position: absolute;
-    right: 458px;
-    top: 11px;
-}
-
-
-.hero__form--coment {
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    width: 448px;
-    height: 120px;
-    margin-bottom: 20px;
-    padding-left: 12px;
-    padding-top: 16px;
-    margin-left: 40px;
-    resize: none;
-    padding: 16px 12px;
-}
-
-.hero__form--coment::placeholder {
-    font-family: 'Roboto';
-    font-weight: 400;
-    font-size: 12px;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
-}
-
-.hero__form--coment:focus {
-    outline: 1px solid var(--color-body-blue);
-}
-
-
-.hero__form--label {
-    margin-bottom: 40px;
-    margin-left: 40px;
-    font-family: 'Roboto';
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 171%;
-    letter-spacing: 0.03em;
-    color: #757575;
-    margin-left: 54px;
-}
-
-
-
-
-.hero__form--link {
-    font-family: getFont('font-family');
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 171%;
-    letter-spacing: 0.03em;
-    color: getColor('blue-color');
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-}
-
-.hero__form--button {
-    border-radius: 4px;
-    width: 200px;
-    height: 50px;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    background: getColor('blue-bacround');
-    border: 1px solid getColor('blue-bacround');
-    font-family: getFont('font-family');
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 187%;
-    letter-spacing: 0.06em;
-    text-align: center;
-    color: #fff;
-    margin-left: 164px;
-    margin-bottom: 40px;
+    .modal__div--title {
+        font-family: getFont('font-family');
+        font-weight: 700;
+        font-size: 20px;
+        color: getColor('black-color');
+        margin-bottom: 12px;
+        text-align: center;
+    }
 }
