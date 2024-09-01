@@ -280,62 +280,56 @@ body {
 .features {
   padding-top: 94px;
 }
-
-.features--list {
+.features__list {
   display: flex;
+  justify-content: space-between;
 }
-
-.features__list--item:not(:last-child) {
-  margin-right: 30px;
+.features__list--item {
+  width: 270px;
 }
-
-.features__list--item:nth-child(1)::after {
-  display: block;
+.features__list--item:nth-child(1)::before {
+  display: inline-block;
   content: "";
   margin-bottom: 30px;
-  background: url(../images/antenna.svg) 50%/70px no-repeat var(--color-body-white_2);
+  background: 50%/70px no-repeat #F5F4FA url(../images/antenna.svg);
+  background-size: 50%/70px;
   width: 270px;
   height: 120px;
 }
-
-.features__list--item:nth-child(2)::after {
-  display: block;
+.features__list--item:nth-child(2)::before {
+  display: inline-block;
   content: "";
   margin-bottom: 30px;
-  background: url(../images/clock.svg) 50%/70px no-repeat var(--color-body-white_2);
+  background: 50%/70px no-repeat #F5F4FA url(../images/clock.svg);
   width: 270px;
   height: 120px;
 }
-
-.features__list--item:nth-child(3)::after {
-  display: block;
+.features__list--item:nth-child(3)::before {
+  display: inline-block;
   content: "";
   margin-bottom: 30px;
-  background: url(../images/diagram.svg) 50%/70px no-repeat var(--color-body-white_2);
+  background: 50%/70px no-repeat #F5F4FA url(../images/diagram.svg);
   width: 270px;
   height: 120px;
 }
-
-.features__list--item:nth-child(4)::after {
-  display: block;
+.features__list--item:nth-child(4)::before {
+  display: inline-block;
   content: "";
   margin-bottom: 30px;
-  background: url(../images/astronaut.svg) 50%/70px no-repeat var(--color-body-white_2);
+  background: 50%/70px no-repeat #F5F4FA url(../images/astronaut.svg);
   width: 270px;
   height: 120px;
 }
-
 .features__list--title {
   font-size: 14px;
-  color: var(--color-body-black);
+  color: #212121;
   font-weight: 700;
   line-height: 1.17;
   margin-bottom: 10px;
 }
-
 .features__list--text {
   font-size: 14px;
-  color: var(--color-body-gray);
+  color: #757575;
   font-weight: 400;
   line-height: 1.7;
 }
@@ -509,6 +503,9 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+.footer__address {
+  display: flex;
+}
 .footer__address--link {
   color: #2196F3;
   font-size: 26px;
@@ -531,38 +528,15 @@ body {
   margin-top: 20px;
   font-family: Roboto;
 }
-.footer__address {
+.footer--address {
   display: block;
-}
-.footer__address-list--link {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.6);
-  font-weight: 400;
-  line-height: 1.71;
-  margin-top: 9px;
-  margin-bottom: 9px;
-  font-family: Roboto;
-}
-.footer-div {
-  margin-top: 12px;
-  margin-left: 70px;
-  margin-right: 93px;
-}
-.footer-title {
-  font-family: Roboto;
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  margin-bottom: 20px;
-}
-.footer__lists {
-  display: flex;
 }
 .footer__lists--item {
   display: flex;
   flex-direction: column;
+  margin-right: 10px;
+}
+.footer__lists--item:not(:last-child) {
   margin-right: 10px;
 }
 .footer__lists--images {
@@ -584,6 +558,15 @@ body {
   fill: #FFFFFF;
   background-color: #2196F3;
 }
+.footer__div--title {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
 .footer__form--input {
   font-family: Roboto;
   font-weight: 400;
@@ -597,7 +580,7 @@ body {
   height: 50px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: rgba(33, 150, 243, 0);
-  padding: 15px 0 15px 16px;
+  padding: 15px 16px;
 }
 .footer__form--button {
   border-radius: 4px;
@@ -622,14 +605,14 @@ body {
   fill: #FFFFFF;
   background-size: cover;
 }
-.footer-current, .footer-lists, .footer-address, .footer-li {
-  display: flex;
-}
-.footer-current.footer-li:not(:last-child), .footer-lists.footer-li:not(:last-child), .footer-address.footer-li:not(:last-child), .footer-li.footer-li:not(:last-child) {
-  margin-right: 10px;
-}
-.footer .container-footer {
-  display: flex;
+.footer--title {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 20px;
 }
 
 .main-list {
