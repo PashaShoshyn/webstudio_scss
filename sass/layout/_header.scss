@@ -10,22 +10,18 @@
     .header-nav,
     .nav-list,
     .contacts-list {
-        display: flex;
-        align-items: center;
+        @include flex-center;
     }
 
     .header-nav {
-        margin-right: 318px;
+        margin-right: 300px;
 
         .header__nav--link {
+            @include font-style(26px, 700);
             color: getColor('blue-color');
-            font-size: 26px;
-            font-family: getFont('second-family');
-            font-weight: 700;
-            line-height: 1.17;
             
             .nav__link--item {
-                color: getColor('black-text'); 
+                color: getColor('black-text');
                 margin-right: 93px;
             }
         }
@@ -37,13 +33,9 @@
                 }
 
                 .nav__list--link {
-                    font-size: 14px;
+                    @include font-style(14px);
                     color: getColor('black-color');
-                    font-family: getFont('second-family');
-                    font-weight: 500;
-                    line-height: 1.17;
-                    position: relative;
-                    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                    @include link-hover(getColor('blue'));
 
                     &.active::after {
                         width: 100%;
@@ -54,11 +46,7 @@
                         border-radius: 2px;
                         background-color: getColor('blue-color');
                         display: block;
-                        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-                    }
-
-                    &:hover {
-                        color: getColor('blue');
+                        @include transition-hover;
                     }
                 }
             }
@@ -75,18 +63,11 @@
         }
 
         .nav__lists--link {
+            @include font-style(14px);
             color: getColor('gray-backround');
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 1.17;
-            font-family: 'Roboto';
             display: flex;
-            transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-            &:hover {
-                color: getColor('blue');
-            }
-
+            @include link-hover;
+            
             .nav__lists--svg {
                 margin-right: 10px;
             }

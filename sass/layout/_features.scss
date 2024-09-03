@@ -1,67 +1,37 @@
 .features {
     padding-top: 94px;
-    
 
     &__list {
         display: flex;
         justify-content: space-between;
 
-        &--item{
+        &--item {
             width: 270px;
+
+            &:nth-child(1)::before {
+                @include feature-icon('../images/antenna.svg');
+            }
+
+            &:nth-child(2)::before {
+                @include feature-icon('../images/clock.svg');
+            }
+
+            &:nth-child(3)::before {
+                @include feature-icon('../images/diagram.svg');
+            }
+
+            &:nth-child(4)::before {
+                @include feature-icon('../images/astronaut.svg');
+            }
         }
 
-        &--item:nth-child(1)::before {
-            display: inline-block;
-            content: "";
-            margin-bottom: 30px;
-            background: 50%/70px no-repeat getColor('white-backround') url(../images/antenna.svg);
-            background-size: 50%/70px ;
-            width: 270px;
-            height: 120px;
-        }
-
-        &--item:nth-child(2)::before {
-            display: inline-block;
-            content: "";
-            margin-bottom: 30px;
-            background: 50%/70px no-repeat getColor('white-backround') url(../images/clock.svg);
-            width: 270px;
-            height: 120px;
-        }
-
-        &--item:nth-child(3)::before {
-            display: inline-block;
-            content: "";
-            margin-bottom: 30px;
-            background: 50%/70px no-repeat getColor('white-backround') url(../images/diagram.svg);
-            width: 270px;
-            height: 120px;
-        }
-
-        &--item:nth-child(4)::before {
-            display: inline-block;
-            content: "";
-            margin-bottom: 30px;
-            background: 50%/70px no-repeat getColor('white-backround') url(../images/astronaut.svg);
-            width: 270px;
-            height: 120px;
-        }
         &--title {
-            font-size: 14px;
-            color: getColor(black-color);
-            font-weight: 700;
-            line-height: 1.17;
-            margin-bottom: 10px;
+            @extend %feature-title;
+            color: getColor('black-color');
         }
 
         &--text {
-            font-size: 14px;
-            color: getColor(gray-backround);
-            font-weight: 400;
-            line-height: 1.7;
+            @extend %feature-text;
         }
     }
-
 }
-
-
