@@ -6,6 +6,7 @@
     width: 100%;
     z-index: 1;
 
+
     .header-flex,
     .header-nav,
     .nav-list,
@@ -19,37 +20,40 @@
         .header__nav--link {
             @include font-style(26px, 700);
             color: getColor('blue-color');
-            
+
             .nav__link--item {
                 color: getColor('black-text');
                 margin-right: 93px;
             }
         }
+ 
+        .nav__list {
 
-        .nav-list {
-            .nav__list--items {
-                &:not(:last-child) {
-                    margin-right: 50px;
+
+            &--link {
+                @include font-style(14px);
+                color: getColor('black-color');
+                @include link-hover(getColor('blue'));
+
+                &.active::after {
+                    width: 60px;
+                    height: 2px;
+                    content: "";
+                    position: absolute;
+                    bottom: 0px;
+                    border-radius: 2px;
+                    background-color: getColor('blue-color');
+                    display: block;
                 }
 
-                .nav__list--link {
-                    @include font-style(14px);
-                    color: getColor('black-color');
-                    @include link-hover(getColor('blue'));
+       
 
-                    &.active::after {
-                        width: 100%;
-                        height: 2px;
-                        content: "";
-                        position: absolute;
-                        bottom: -28px;
-                        border-radius: 2px;
-                        background-color: getColor('blue-color');
-                        display: block;
-                        @include transition-hover;
-                    }
-                }
+                
             }
+            &--items {
+                margin-right: 50px;
+        }
+
         }
     }
 
@@ -67,7 +71,7 @@
             color: getColor('gray-backround');
             display: flex;
             @include link-hover;
-            
+
             .nav__lists--svg {
                 margin-right: 10px;
             }
