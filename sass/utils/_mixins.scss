@@ -1,200 +1,223 @@
-body {
-  animation: fade-in 2s ease-in-out;
-}
 
-@mixin flex-center {
-  display: flex;
-  align-items: center;
-}
-
-@mixin font-style($size, $weight: 500) {
-  font-size: $size;
-  font-family: getFont('second-family');
-  font-weight: $weight;
-  line-height: 1.17;
-}
-
-@mixin link-hover($color: getColor('blue')) {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover {
-    color: $color;
+@mixin mob($breakPoint) {
+  @media screen and (min-width: $breakPoint) {
+      @content;
   }
 }
 
-
-
-
-
-
-@mixin background-gradient($url, $color) {
-  background: linear-gradient(to right, $color, $color), url($url) no-repeat center/cover;
-}
-
-@mixin button-style($bg-color, $font-color, $border-color, $padding: 10px 32px) {
-  background-color: $bg-color;
-  color: $font-color;
-  border: 1px solid $border-color;
-  padding: $padding;
-  border-radius: 4px;
-}
-
-@mixin input-style($width: 448px, $height: 40px, $padding: 2px 0 2px 50px) {
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  width: $width;
-  height: $height;
-  padding: $padding;
-
-  &:focus {
-    outline: 1px solid getColor('blue-color');
+@mixin tab($breakPoint) {
+  @media screen and (min-width: $breakPoint) {
+      @content;
   }
 }
 
-@mixin modal-transition {
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms,
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-}
-
-@mixin feature-icon($url) {
-  display: inline-block;
-  content: "";
-  margin-bottom: 30px;
-  background: 50%/70px no-repeat getColor('white-backround') url($url);
-  width: 270px;
-  height: 120px;
-}
-
-@mixin padding-section($padding-top: 94px, $padding-bottom: 94px) {
-  padding-top: $padding-top;
-  padding-bottom: $padding-bottom;
-}
-
-@mixin flex-layout($justify: space-between) {
-  display: flex;
-  justify-content: $justify;
-}
-
-
-
-
-
-
-
-
-
-
-@mixin box-shadow {
-  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2),
-    0 1px 1px 0 rgba(0, 0, 0, 0.14),
-    0 1px 3px 0 rgba(0, 0, 0, 0.12);
-}
-
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin transition-color($time: 250ms) {
-  transition: color $time cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@mixin team-title($font-size: 36px, $color: 'black-color') {
-  font-size: $font-size;
-  color: getColor($color);
-  font-weight: 700;
-  line-height: 1.17;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-
-@mixin footer-text {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 171%;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-  text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-}
-
-
-
-
-
-
-
-
-@mixin transition($properties, $duration: 250ms, $timing-function: cubic-bezier(0.4, 0, 0.2, 1), $delay: 0) {
-  transition-property: $properties;
-  transition-duration: $duration;
-  transition-timing-function: $timing-function;
-  transition-delay: $delay;
-}
-
-@mixin flex-center-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@mixin flex-center($direction: row) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin outline-hover($color, $width: 1px) {
-  &:hover {
-    outline: solid $color $width;
+@mixin desc($breakPoint) {
+  @media screen and (min-width: $breakPoint) {
+      @content;
   }
 }
 
+// body {
+//   animation: fade-in 2s ease-in-out;
+// }
+
+
+
+//   @mixin flex-center {
+//     display: flex;
+//     align-items: center;
+//   }
+  
+//   @mixin font-style($size, $weight: 500) {
+//     font-size: $size;
+//     font-family: getFont('second-family');
+//     font-weight: $weight;
+//     line-height: 1.17;
+//   }
+  
+//   @mixin link-hover($color: getColor('blue')) {
+//     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+//     &:hover {
+//       color: $color;
+//     }
+//   }
 
 
 
 
 
 
-@mixin transition($properties, $duration: 250ms, $timing-function: cubic-bezier(0.4, 0, 0.2, 1), $delay: 0) {
-  transition-property: $properties;
-  transition-duration: $duration;
-  transition-timing-function: $timing-function;
-  transition-delay: $delay;
-}
 
 
-@mixin flex-center($direction: row) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: center;
-  align-items: center;
-}
+// @mixin background-gradient($url, $color) {
+//   background: linear-gradient(to right, $color, $color), url($url) no-repeat center/cover;
+// }
+
+// @mixin button-style($bg-color, $font-color, $border-color, $padding: 10px 32px) {
+//   background-color: $bg-color;
+//   color: $font-color;
+//   border: 1px solid $border-color;
+//   padding: $padding;
+//   border-radius: 4px;
+// }
+
+// @mixin input-style($width: 448px, $height: 40px, $padding: 2px 0 2px 50px) {
+//   border: 1px solid rgba(33, 33, 33, 0.2);
+//   border-radius: 4px;
+//   width: $width;
+//   height: $height;
+//   padding: $padding;
+
+//   &:focus {
+//     outline: 1px solid getColor('blue-color');
+//   }
+// }
+
+// @mixin modal-transition {
+//   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms,
+//     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+// }
+
+// @mixin feature-icon($url) {
+//   display: inline-block;
+//   content: "";
+//   margin-bottom: 30px;
+//   background: 50%/70px no-repeat getColor('white-backround') url($url);
+//   width: 270px;
+//   height: 120px;
+// }
+
+// @mixin padding-section($padding-top: 94px, $padding-bottom: 94px) {
+//   padding-top: $padding-top;
+//   padding-bottom: $padding-bottom;
+// }
+
+// @mixin flex-layout($justify: space-between) {
+//   display: flex;
+//   justify-content: $justify;
+// }
 
 
-@mixin font-settings($font-family, $font-weight, $font-size, $line-height: normal, $letter-spacing: normal) {
-  font-family: $font-family;
-  font-weight: $font-weight;
-  font-size: $font-size;
-  line-height: $line-height;
-  letter-spacing: $letter-spacing;
-}
 
 
-@mixin margin($top: 0, $right: 0, $bottom: 0, $left: 0) {
-  margin-top: $top;
-  margin-right: $right;
-  margin-bottom: $bottom;
-  margin-left: $left;
-}
 
 
-@mixin border-background($border-color, $background-color, $border-radius: 0, $box-shadow: none) {
-  border: 1px solid $border-color;
-  background-color: $background-color;
-  border-radius: $border-radius;
-  box-shadow: $box-shadow;
-}
+
+
+
+
+// @mixin box-shadow {
+//   box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2),
+//     0 1px 1px 0 rgba(0, 0, 0, 0.14),
+//     0 1px 3px 0 rgba(0, 0, 0, 0.12);
+// }
+
+// @mixin flex-center {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// @mixin transition-color($time: 250ms) {
+//   transition: color $time cubic-bezier(0.4, 0, 0.2, 1);
+// }
+
+// @mixin team-title($font-size: 36px, $color: 'black-color') {
+//   font-size: $font-size;
+//   color: getColor($color);
+//   font-weight: 700;
+//   line-height: 1.17;
+//   text-align: center;
+//   margin-bottom: 50px;
+// }
+
+
+// @mixin footer-text {
+//   font-family: var(--font-family);
+//   font-weight: 400;
+//   font-size: 14px;
+//   line-height: 171%;
+//   letter-spacing: 0.03em;
+//   color: rgba(255, 255, 255, 0.6);
+//   text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+// }
+
+
+
+
+
+
+
+
+// @mixin transition($properties, $duration: 250ms, $timing-function: cubic-bezier(0.4, 0, 0.2, 1), $delay: 0) {
+//   transition-property: $properties;
+//   transition-duration: $duration;
+//   transition-timing-function: $timing-function;
+//   transition-delay: $delay;
+// }
+
+// @mixin flex-center-column {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+
+// @mixin flex-center($direction: row) {
+//   display: flex;
+//   flex-direction: $direction;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// @mixin outline-hover($color, $width: 1px) {
+//   &:hover {
+//     outline: solid $color $width;
+//   }
+// }
+
+
+
+
+
+
+
+// @mixin transition($properties, $duration: 250ms, $timing-function: cubic-bezier(0.4, 0, 0.2, 1), $delay: 0) {
+//   transition-property: $properties;
+//   transition-duration: $duration;
+//   transition-timing-function: $timing-function;
+//   transition-delay: $delay;
+// }
+
+
+// @mixin flex-center($direction: row) {
+//   display: flex;
+//   flex-direction: $direction;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+
+// @mixin font-settings($font-family, $font-weight, $font-size, $line-height: normal, $letter-spacing: normal) {
+//   font-family: $font-family;
+//   font-weight: $font-weight;
+//   font-size: $font-size;
+//   line-height: $line-height;
+//   letter-spacing: $letter-spacing;
+// }
+
+
+// @mixin margin($top: 0, $right: 0, $bottom: 0, $left: 0) {
+//   margin-top: $top;
+//   margin-right: $right;
+//   margin-bottom: $bottom;
+//   margin-left: $left;
+// }
+
+
+// @mixin border-background($border-color, $background-color, $border-radius: 0, $box-shadow: none) {
+//   border: 1px solid $border-color;
+//   background-color: $background-color;
+//   border-radius: $border-radius;
+//   box-shadow: $box-shadow;
+// }

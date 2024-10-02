@@ -1,84 +1,134 @@
-.header {
-    background-color: getColor('white-color');
-    padding-top: 24px;
-    padding-bottom: 25px;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
+@include mob(480px) {
+
+    .header {
+      
+        &-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        &__nav {
+            &--link {
+                color: getColor('blue-color');
+                font-family: getFont('Raleway');
+                font-weight: 700;
+                font-size: 24px;
+                letter-spacing: 0.03em;
 
 
-    .header-flex,
-    .header-nav,
-    .nav-list,
-    .contacts-list {
-        @include flex-center;
-    }
+            }
 
-    .header-nav {
-        margin-right: 300px;
-
-        .header__nav--link {
-            @include font-style(26px, 700);
-            color: getColor('blue-color');
-
-            .nav__link--item {
+            &--span {
                 color: getColor('black-text');
                 margin-right: 93px;
+                align-items: flex-start;
             }
-        }
- 
-        .nav__list {
-
-
-            &--link {
-                @include font-style(14px);
-                color: getColor('black-color');
-                @include link-hover(getColor('blue'));
-
-                &.active::after {
-                    width: 60px;
-                    height: 2px;
-                    content: "";
-                    position: absolute;
-                    bottom: 0px;
-                    border-radius: 2px;
-                    background-color: getColor('blue-color');
-                    display: block;
-                }
-
-       
-
-                
-            }
-            &--items {
-                margin-right: 50px;
-        }
-
         }
     }
 
-    .nav__lists--item {
-        &:not(:last-child) {
-            margin-right: 50px;
+    .nav__list {
+        &--link {
+            display: none;
+        }
+    }
+
+    .nav__lists {
+
+        &--link {
+            display: none;
         }
 
-        &:hover {
-            fill: getColor('blue');
-        }
+        &--button:focus::after.nav__lists {
 
-        .nav__lists--link {
-            @include font-style(14px);
-            color: getColor('gray-backround');
             display: flex;
-            @include link-hover;
-
-            .nav__lists--svg {
-                margin-right: 10px;
-            }
         }
     }
 }
 
-.main {
-    padding-top: 80px;
+
+@include desc(1199px) {
+    .header {
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+        background-color: getColor('white-color');
+
+        &__nav {
+            display: flex;
+
+            &--link {
+                margin-top: 24px;
+                margin-bottom: 25px;
+                font-family: getFont('Roboto');
+                font-weight: 700;
+                font-size: 26px;
+                letter-spacing: 0.03em;
+                color: getColor('blue-color');
+            }
+
+            &--span {
+                
+                font-family: getFont('Roboto');
+                font-weight: 700;
+                font-size: 26px;
+                letter-spacing: 0.03em;
+                color: getColor('black-title');
+            }
+        }
+
+        &--button {
+            display: none;
+        }
+
+
+    }
+
+
+
+
+    .nav__list {
+        display: flex;
+
+        &--items {
+            margin-right: 51px;
+            margin-top: 32px;
+        }
+
+        &--link {
+            display: inline;
+            font-family: getFont('Raleway');
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.02em;
+            color: getColor('black-color');
+        }
+    }
+
+    .nav__lists {
+        display: flex;
+
+        &--item:not(:last-child){
+            margin-right: 30px;
+        }
+        &--link {
+            display: inline;
+            font-family: getFont('Raleway');
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.02em;
+            color: getColor('gray-backround');
+        }
+
+        &--svg{
+            fill: getColor('gray-backround');
+            margin-right: 5px;
+        }
+    }
+
 }

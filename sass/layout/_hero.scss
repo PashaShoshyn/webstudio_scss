@@ -1,132 +1,214 @@
-.hero {
-    padding: 200px 0;
-    @include background-gradient('../images/bacround.png', #2F303A66);
+@include mob(480px) {
+    .hero {
 
-    &__div--text {
-        font-size: 44px;
-        color: getColor('white-color');
-        font-weight: 900;
-        @extend %center-alignment;
-        width: 696px;
-        margin-bottom: 30px;
-    }
+        background: url('/images/heromobile.jpg');
 
-    &__div--button {
-        @include button-style(getColor('blue-color'), getColor('white-color'), getColor('blue-color'));
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 1.8;
-        display: block;
-        margin-left: 480px
-    }
+        width: 480px;
+        height: 400px;
 
-    &__form {
-        @extend %flex-center-column;
-        z-index: 2;
-        border-radius: 4px;
-        width: 528px;
-
-        padding: 40px;
 
         &--text {
-            @extend %font-style;
-            font-size: 12px;
-            color: getColor('gray-backround');
-            margin-bottom: 4px;
-            margin-left: 40px;
+            font-family: getFont('Roboto');
+            font-weight: 900;
+            font-size: 26px;
+            line-height: 162%;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            text-align: center;
+            color: getColor('white-color');
+            padding-top: 118px;
         }
 
-      
-        &--input {
-            @include input-style();
-            // margin-bottom: 10px;
-            // margin-left: 40px;
-            display: block;
-            width: 100%;
-        }
-
-        &--comment {
-            @include input-style($height: 120px, $padding: 16px 12px);
-            margin-bottom: 20px;
-            margin-left: 40px;
-            resize: none;
-
-            &::placeholder {
-                @extend %font-style;
-                font-size: 12px;
-                color: rgba(117, 117, 117, 0.5);
+        &__div {
+            &--button {
+                width: 200px;
+                height: 50px;
+                background-color: getColor('blue-color');
+                font-family: getFont('Roboto');
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 187%;
+                letter-spacing: 0.06em;
+                text-align: center;
+                color: getColor('white-color');
+                margin-left: 120px;
+                margin-top: 30px;
             }
         }
 
-        &--label {
-            margin: 0 0 40px 54px;
-            @extend %font-style;
-            font-size: 14px;
-            color: #757575;
-        }
+    }
 
-        &--link {
-            @extend %font-style;
-            font-size: 14px;
-            color: getColor('blue-color');
-            text-decoration: underline;
-        }
+    .backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
 
-        &--button {
-            @include button-style(getColor('blue-background'), #fff, getColor('blue-background'), 10px 32px);
-            width: 200px;
-            height: 50px;
-            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-            margin-bottom: 40px;
+        &.is-hidden {
+            opacity: 0;
+            pointer-events: none;
+
+            .div--modal {
+                transform: translate(-50%, -50%) scale(0);
+            }
         }
     }
 }
 
-.backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
 
-    &.is-hidden {
-        opacity: 0;
-        pointer-events: none;
+@include desc(1199px) {
+    .hero {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        background-size: cover;
+        
+        background-image: url('/images/bacround.png');
 
-        .div--modal {
-            transform: translate(-50%, -50%) scale(0);
+        &--text {
+            font-family: getFont('Roboto');
+            font-weight: 900;
+            font-size: 44px;
+            line-height: 136%;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            text-align: center;
+            color: getColor('white-color');
+        }
+
+
+        &__div--text {
+            font-size: 26px;
+            color: getColor('white-color');
+            font-weight: 900;
+            width: 696px;
+            margin-bottom: 30px;
+
+        }
+
+        &__div--button {
+
+            display: block;
+            margin-left: 480px;
+
+            font-family: getFont('Roboto');
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 187%;
+            letter-spacing: 0.06em;
+            text-align: center;
+            color: getColor('white-color');
+        }
+
+        &__form {
+            z-index: 2;
+            border-radius: 4px;
+
+            &--text {
+                font-size: 12px;
+                color: getColor('gray-backround');
+                margin-bottom: 4px;
+                margin-left: 40px;
+            }
+
+
+            &--input {
+
+                display: block;
+
+            }
+
+            &--comment {
+                margin-bottom: 20px;
+                margin-left: 40px;
+                resize: none;
+
+                &::placeholder {
+
+                    font-size: 12px;
+                    color: rgba(117, 117, 117, 0.5);
+                }
+            }
+
+            &--label {
+                margin: 0 0 40px 54px;
+
+                font-size: 14px;
+                color: #757575;
+            }
+
+            &--link {
+
+                font-size: 14px;
+                color: getColor('blue-color');
+                text-decoration: underline;
+            }
+
+            &--button {
+
+                width: 200px;
+                height: 50px;
+                box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+                margin-bottom: 40px;
+            }
         }
     }
-}
 
-.modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 400px;
-    min-height: 300px;
-    background-color: getColor('white-color');
-    transform: translate(-50%, -50%) scale(1);
+    .backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
 
-    .modal__div--svg {
-        border-radius: 100%;
-        fill: getColor('black-title');
-        outline: 1px auto rgba(0, 0, 0, 0.1);
-        padding: 6px;
-        margin: 8px 8px 0 auto;
+        &.is-hidden {
+            opacity: 0;
+            pointer-events: none;
 
-        &:hover {
-            fill: getColor('blue-color');
+            .div--modal {
+                transform: translate(-50%, -50%) scale(0);
+            }
         }
     }
 
-    .modal__div--title {
-        @extend %font-style;
-        font-weight: 700;
-        font-size: 20px;
-        color: getColor('black-color');
-        margin-bottom: 12px;
-        text-align: center;
+
+
+
+
+    .modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 400px;
+        min-height: 300px;
+        background-color: getColor('white-color');
+        transform: translate(-50%, -50%) scale(1);
+
+        .modal__div--svg {
+            border-radius: 100%;
+            fill: getColor('black-title');
+            outline: 1px auto rgba(0, 0, 0, 0.1);
+            padding: 6px;
+            margin: 8px 8px 0 auto;
+
+            &:hover {
+                fill: getColor('blue-color');
+            }
+        }
+
+        .modal__div--title {
+
+            font-weight: 700;
+            font-size: 20px;
+            color: getColor('black-color');
+            margin-bottom: 12px;
+            text-align: center;
+        }
     }
+
+
+
+
 }

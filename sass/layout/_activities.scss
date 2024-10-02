@@ -1,25 +1,86 @@
-.activities {
-    @include padding-section();
+@include mob(480px) {
+    .activities {
+        display: none;
 
-    &__list {
-        &--item {
-            position: relative;
+        &__list {
+            &--item {
+                display: none;
+            }
+
+            &--text {
+
+                display: none;
+            }
         }
 
-        &--text {
-            @extend %text-overlay;
-            font-family: getFont('font-family');
+        &__div {
+            &--title {
+
+                display: none;
+            }
         }
     }
+}
 
-    &__div {
-        &--title {
-            @extend %section-title;
-            color: getColor('black-color');
+
+
+
+@include desc(1199px) {
+    .activities {
+        display: inline;
+       
+
+        &__div {
+            &--title {
+                font-family: getFont('Roboto');
+                font-weight: 700;
+                font-size: 36px;
+                letter-spacing: 0.03em;
+                color: getColor('black-color');
+                margin-left: 370px;
+            }
         }
-    }
 
-    &--list {
-        @include flex-layout();
+        &__list {
+            display: flex;
+            margin-top: 50px;
+
+            &--item {
+                display: inline;
+                position: relative;
+                margin-bottom: 94px;
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
+            }
+
+            &--text {
+                display: inline;
+                
+                position: absolute;
+               
+                bottom: 0;
+                width: 100%;
+                padding-top: 27px;
+                padding-bottom: 27px;
+                font-weight: 700;
+                font-size: 14px;
+                letter-spacing: .03em;
+                text-transform: uppercase;
+                text-align: center;
+                color: getColor('white-color');
+                font-family: getFont('Roboto');
+                background: rgba(47, 48, 58, .8);
+                
+            }
+
+        }
+
+        &__div {
+            &--title {
+
+                display: inline;
+            }
+        }
     }
 }

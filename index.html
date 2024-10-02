@@ -21,9 +21,9 @@
 
         <header class="header">
             <div class="container header-flex">
-                <nav class="header-nav">
-                    <a href="./" class=" header__nav--link">Web<span class="nav__link--item">Studio</span></a>
-                    <ul class="nav-list">
+                <nav class="header__nav">
+                    <a href="./" class=" header__nav--link">Web<span class="header__nav--span">Studio</span></a>
+                    <ul class="nav__list">
                         <li class="nav__list--items"><a href="./index.html" class="nav__list--link active">Студія</a>
                         </li>
                         <li class="nav__list--items"><a href="./portofilo.html" class="nav__list--link">Портфоліо</a>
@@ -32,7 +32,7 @@
                         </li>
                     </ul>
                 </nav>
-                <ul class="nav-list">
+                <ul class="nav__lists">
                     <li class="nav__lists--item"><a href="mailto:info@devstudio.com" class=" nav__lists--link">
                             <svg class="nav__lists--svg" width="16px" height="12px">
                                 <use href="./images/symboldefs.svg#envelope"></use>
@@ -46,48 +46,56 @@
                             +38 096 111 11 11</a>
                     </li>
                 </ul>
+                <button class="header--button">
+                    <svg width="40px" height="40px">
+                        <use href="./images/symboldefs.svg#mobile-menu-open-btn">
+                        </use>
+                    </svg>
+                </button>
             </div>
         </header>
         <main class="main">
             <section class="hero">
                 <div class="container">
-                    <h1 class="hero__div--text">Ефективне рішення для вашого бізнесу</h1>
+                    <h1 class="hero--text">Ефективне рішення для вашого бізнесу</h1>
                     <button type="button" class="hero__div--button" data-modal-open>Замовити послугу
                     </button>
                     <div class="backdrop is-hidden" data-modal>
                         <div class="modal">
                             <svg class="modal__div--svg" width="30px" height="30px" data-modal-close>
-                                <use href="./images/symboldefs.svg#cross"></use>
+                                <use href="./images/symboldefs.svg#name"></use>
                             </svg>
                             <h2 class="modal__div--title">Залиште свої дані, ми вам передзвонимо</h2>
                             <form class="hero__form">
                                 <label for="fname" class="hero__form--text"> Ім'я</label>
                                 <div class="form-div">
-                                    <input type="text" class="hero__form--imput" id="fname" name="firstname" required />
-                                    <!-- <svg width="18px" height="18px" id="fname" class="form__div--svg">
+                                    <input type="text" class="hero__form--input" id="fname" name="firstname" required />
+                                    <svg width="18px" height="18px" id="fname" class="modal__div--svg">
                                         <use href="./images/symboldefs.svg#name"></use>
-                                    </svg> -->
+                                    </svg>
                                 </div>
 
                                 <label for="tel" class="hero__form--text">Телефон</label>
                                 <div class="form-div">
-                                    <input class="hero__form--imput" type="text" id="tel" name="lastname" required />
-                                    <!-- <svg width="18px" height="18px" id="fname" class="form__div--svg">
+                                    <input class="hero__form--input" type="text" id="tel" name="lastname" required />
+                                    <svg width="18px" height="18px" id="fname" class="modal__div--svg">
                                         <use href="./images/symboldefs.svg#phone"></use>
-                                    </svg> -->
+                                    </svg>
                                 </div>
 
                                 <label for="email" class="hero__form--text">Пошта</label>
                                 <div class="form-div">
-                                    <input class="hero__form--imput" type="email" id="email" name="email" required />
-                                    <!-- <svg width="18px" height="18px" id="fname" class=" form__div--svg">
+                                    <input class="hero__form--input" type="email" id="email" name="email" required />
+                                    <svg width="18px" height="18px" id="fname" class=" modal__div--svg">
                                         <use href="./images/symboldefs.svg#mail"></use>
-                                    </svg> -->
+                                    </svg>
+
+                                   
                                 </div>
 
 
                                 <label for="comment" class="hero__form--text">Коментар</label>
-                                <textarea id="comment" class="hero__form--coment" placeholder="Ведіть текст"></textarea>
+                                <textarea id="comment" class="hero__form--comment" placeholder="Ведіть текст"></textarea>
 
                                 <label class="hero__form--label">
                                     <input type="checkbox">
@@ -137,7 +145,7 @@
             <section class="activities">
                 <div class="container activities--container">
                     <h2 class="activities__div--title">Чим ми займаємося</h2>
-                    <ul class="activities--list">
+                    <ul class="activities__list">
                         <li class="activities__list--item"><img src="./images/codings.jpg" alt="програмування"
                                 width="370" class="activities__list--img">
                             <p class="activities__list--text">Десктопні додатки</p>
@@ -162,6 +170,7 @@
                     <ul class="team__list">
                         <li class="team__list--item">
                             <img class="team__list--img" src="./images/igor.jpg" alt="Ігор Дем'яненко" width="270">
+                            <img class="team__list--mobile" src="/images/igormobile.jpg" alt="Ігор Дем'яненко" width="450">
                             <h3 class="team__list--title">Ігор Дем'яненко</h3>
                             <p class="team__list--text">Product Designer</p>
 
@@ -198,6 +207,7 @@
                         </li>
                         <li class="team__list--item">
                             <img src="./images/olga.jpg" class="team__list--img" alt="Ольга Рєпіна" width="270">
+                            <img class="team__list--mobile" src="/images/olgamobile.jpg" alt="Ольга Рєпіна" width="450">
                             <h3 class="team__list--title">Ольга Рєпіна</h3>
                             <p class="team__list--text">Frontend Developer</p>
                             <ul class="team__lists">
@@ -233,6 +243,7 @@
                         </li>
                         <li class="team__list--item">
                             <img src="./images/nykolay.jpg" class="team__list--img" alt="Микола Тарасов" width="270">
+                            <img class="team__list--mobile" src="/images/mykolamobile.jpg" alt="Микола Тарасов" width="450">
                             <h3 class="team__list--title">Микола Тарасов</h3>
                             <p class="team__list--text">Marketing</p>
                             <ul class="team__lists">
@@ -268,6 +279,7 @@
                         </li>
                         <li class="team__list--item">
                             <img src="./images/michael.jpg" class="team__list--img" alt="Михайло Єрмаков" width="270">
+                            <img class="team__list--mobile" src="/images/mishamobile.jpg" alt="Михайло Єрмаков" width="450">
                             <h3 class="team__list--title">Михайло Єрмаков</h3>
                             <p class="team__list--text">Product Designer</p>
                             <ul class="team__lists">
@@ -312,48 +324,48 @@
 
                         <li class="customers__lists--item">
                             <a href="./" class="customers__lists--link">
-                                <svg width="41px" height="46.7px">
-                                    <use class="customers__lists--svg" href="./images/symboldefs.svg#yaco"></use>
+                                <svg width="41px" height="46.7px" class="customers__lists--svg" >
+                                    <use href="./images/symboldefs.svg#yaco"></use>
                                 </svg>
                             </a>
                         </li>
 
                         <li class="customers__lists--item">
                             <a href="./" class="customers__lists--link">
-                                <svg width="40px" height="52px">
-                                    <use class="customers__lists--svg" href="./images/symboldefs.svg#union"></use>
+                                <svg width="40px" height="52px" class="customers__lists--svg">
+                                    <use  href="./images/symboldefs.svg#union"></use>
                                 </svg>
                             </a>
                         </li>
 
                         <li class="customers__lists--item">
                             <a href="./" class="customers__lists--link">
-                                <svg width="43.46px" height="41.18px">
-                                    <use class="customers__lists--svg" href="./images/symboldefs.svg#company"></use>
+                                <svg width="43.46px" height="41.18px" class="customers__lists--svg">
+                                    <use  href="./images/symboldefs.svg#company"></use>
                                 </svg>
                             </a>
                         </li>
 
                         <li class="customers__lists--item">
                             <a href="./" class="customers__lists--link">
-                                <svg width="84.44px" height="40.62px">
-                                    <use class="customers__lists--svg" href="./images/symboldefs.svg#peters"></use>
+                                <svg width="84.44px" height="40.62px" class="customers__lists--svg">
+                                    <use  href="./images/symboldefs.svg#peters"></use>
                                 </svg>
                             </a>
                         </li>
 
                         <li class="customers__lists--item">
                             <a href="./" class="customers__lists--link">
-                                <svg width="62.54px" height="45.43px">
-                                    <use class="customers__lists--svg" href="./images/symboldefs.svg#brand"></use>
+                                <svg width="62.54px" height="45.43px" class="customers__lists--svg">
+                                    <use  href="./images/symboldefs.svg#brand"></use>
                                 </svg>
                             </a>
                         </li>
 
                         <li class="customers__lists--item">
                             <a href="./" class="customers__lists--link">
-                                <svg width="93.79px" height="43.93px">
-                                    <use class="customers__lists--svg" href="./images/symboldefs.svg#line"></use>
+                                <svg width="93.79px" height="43.93px" class="customers__lists--svg">
+                                    <use  href="./images/symboldefs.svg#line"></use>
                                 </svg>
                             </a>
                         </li>
@@ -367,7 +379,7 @@
             <div class="container footer__container">
 
                 <div class="footer__div">
-                    <a href="./" class="footer__address--link">Web<span class="footer__address--span">Studio</span></a>
+                    <a href="./" class="footer__div--link">Web<span class="footer__div--span">Studio</span></a>
                     <address class="footer__address">
                         <ul class="footer__list">
                             <li class="footer__address--item">м. Київ, пр-т Лесі Українки, 26</li>
@@ -381,7 +393,7 @@
                 </div>
 
 
-                <div class="footer-div">
+                <div class="footer__div">
                     <h2 class="footer__div--title">приєднуйтесь</h2>
                     <ul class="footer__lists">
                         <li class="footer__lists--item">
@@ -415,9 +427,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="footer_address">
-                    <h2 class="footer__div--title">Підпишіться на розсилку</h2>
-                    <form class="footer_form">
+                <div class="footer__address">
+                    <h2 class="footer__address--title">Підпишіться на розсилку</h2>
+                    <form class="footer__form">
                         <input class="footer__form--input" type="email" id="email" name="email" placeholder="E-mail"
                             required />
                         <button class="footer__form--button">Підписатися <svg width="24px" height="24px"

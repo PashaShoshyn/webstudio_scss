@@ -1,107 +1,84 @@
-// .customers {
-//     padding-top: 94px;
-//     padding-bottom: 94px;
+@media (min-width: 480px) {
 
-//     &--container{
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//     }
-//     &__lists {
-//         display: flex;
-//         transition-property: border, fill;
-//         transition-duration: 250ms;
-//         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-//         transition-delay: 0;
-//         color: getColor('black-color');
+    .customers {
+        &__div {
+            &--title {
+                font-family: getFont('Roboto');
+                font-weight: 700;
+                font-size: 28px;
+                letter-spacing: 0.03em;
+                text-align: center;
+                color: getColor('black-color');
+            }
+        }
 
-//         &--item {
-//             &:hover {
-//                 outline: solid getColor('blue-color') 1px;
-//             }
+        &__lists {
 
-//             &:not(:last-child) {
-//                 margin-right: 30px;
-//             }
-//         }
+            display: inline-block;
+            margin-bottom: 30px;
+            margin-top: 64px;
+            width: 1170px;
 
-//         &--link {
-//             outline: solid getColor('gray-text') 1px;
-//             border-radius: 4px;
-//             width: 170px;
-//             height: 92px;
-//             display: flex;
-//             flex-direction: column;
-//             justify-content: center;
-//             align-items: center;
-//             fill: #AFB1B8;
-//             transition-property: fill;
-//             transition-duration: 250ms;
-//             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-//             transition-delay: 0;
+            &--item {
+                border: 1px solid #afb1b8;
+                border-radius: 4px;
+                width: 210px;
+                height: 97px;
+            }
 
-//             &:hover {
-//                 outline: solid getColor('blue-color') 1px;
-//                 fill: getColor('blue-color');
-//             }
-//         }
-//     }
+            &--link {
+                fill: getColor('gray-backround');
+                position: absolute;
+                margin-top: 21px;
+                left: 98px;
+            }
+        }
+    }
 
-//     &__div--title {
-//         font-family: getFont('font-family');
-//         font-weight: 700;
-//         font-size: 36px;
-//         line-height: 42.19px;
-//         margin-bottom: 50px;
-//         color: getColor('black-color');
-//     }
+}
+
+// @media (min-width: 768px) {
+
+
 // }
 
 
-.customers {
-    padding-top: 94px;
-    padding-bottom: 94px;
 
-   
-
-    &--container {
-        @include flex-center-column;
-      
-    }
-
-    &__lists {
-        @include transition(border, fill);
-
-        display: flex;
-        color: getColor('black-color');
-
-        &--item {
-            @include outline-hover(getColor('blue-color'));
-
-            &:not(:last-child) {
-                margin-right: 30px;
+@media (min-width: 1199px) {
+    .customers {
+        
+       
+        &__div {
+            &--title {
+                font-family: getFont('Roboto');
+                font-weight: 700;
+                font-size: 36px;
+                letter-spacing: 0.03em;
+                text-align: center;
+                color: getColor('black-color');
+                margin-top: 94px;
             }
         }
 
-        &--link {
-            outline: solid getColor('gray-text') 1px;
-            border-radius: 4px;
-            width: 170px;
-            height: 92px;
-            @include flex-center(column);
-            fill: #AFB1B8;
-            @include transition(fill);
+        &__lists {
+            display: flex;
+            width: 1000px;
+            
+            &--item{
+                &:not(:last-child){
+                    margin-right: 30px;
+                }
+            }
 
-            @include outline-hover(getColor('blue-color'));
-
-            &:hover {
-                fill: getColor('blue-color');
+            &--link {  
+                fill: getColor('gray-backround');
+                position: relative;
+                top: 20px;
+                left: 50px;
+                right: 50px;
             }
         }
     }
 
-    &__div--title {
-        @extend %font-style-title;
-        margin-bottom: 50px;
-    }
+
 }
