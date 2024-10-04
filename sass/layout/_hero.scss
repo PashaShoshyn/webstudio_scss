@@ -1,11 +1,9 @@
 @include mob(480px) {
     .hero {
-
-        background: url('/images/heromobile.jpg');
-
-        width: 480px;
-        height: 400px;
-
+        background: url('../images/heromobile.jpg');
+        padding-bottom: 118px;
+        padding-top: 118px;
+        margin-top: 1px;
 
         &--text {
             font-family: getFont('Roboto');
@@ -16,13 +14,13 @@
             text-transform: uppercase;
             text-align: center;
             color: getColor('white-color');
-            padding-top: 118px;
         }
 
         &__div {
             &--button {
                 width: 200px;
                 height: 50px;
+                border-radius: 4px;
                 background-color: getColor('blue-color');
                 font-family: getFont('Roboto');
                 font-weight: 700;
@@ -60,11 +58,12 @@
 
 @include desc(1199px) {
     .hero {
-        padding-top: 200px;
-        padding-bottom: 200px;
+        margin-top: 85px;
+        width: 100%;
         background-size: cover;
-        
-        background-image: url('/images/bacround.png');
+        background-image: url('../images/bacround.png');
+        padding-bottom: 200px;
+        padding-top: 200px;
 
         &--text {
             font-family: getFont('Roboto');
@@ -91,7 +90,7 @@
 
             display: block;
             margin-left: 480px;
-
+            border-radius: 4px;
             font-family: getFont('Roboto');
             font-weight: 700;
             font-size: 16px;

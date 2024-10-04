@@ -1,7 +1,8 @@
 @include mob(480px) {
 
     .header {
-      
+
+
         &-flex {
             display: flex;
             justify-content: space-between;
@@ -30,26 +31,18 @@
                 align-items: flex-start;
             }
         }
-    }
 
-    .nav__list {
-        &--link {
-            display: none;
+        &--button:focus .nav__list {
+
+
+            background-color: red;
+
         }
     }
 
-    .nav__lists {
 
-        &--link {
-            display: none;
-        }
-
-        &--button:focus::after.nav__lists {
-
-            display: flex;
-        }
-    }
 }
+
 
 
 @include desc(1199px) {
@@ -57,6 +50,7 @@
         position: fixed;
         width: 100%;
         z-index: 1;
+        bottom: 620px;
         background-color: getColor('white-color');
 
         &__nav {
@@ -70,10 +64,22 @@
                 font-size: 26px;
                 letter-spacing: 0.03em;
                 color: getColor('blue-color');
+
+                &.active::after {
+                    width: 20px;
+                    height: 2px;
+                    content: "";
+                    position: absolute;
+                    bottom: -28px;
+                    border-radius: 2px;
+                    background-color: getColor('blue-color');
+                    display: block;
+                    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                }
             }
 
             &--span {
-                
+
                 font-family: getFont('Roboto');
                 font-weight: 700;
                 font-size: 26px;
@@ -113,9 +119,10 @@
     .nav__lists {
         display: flex;
 
-        &--item:not(:last-child){
+        &--item:not(:last-child) {
             margin-right: 30px;
         }
+
         &--link {
             display: inline;
             font-family: getFont('Raleway');
@@ -125,7 +132,7 @@
             color: getColor('gray-backround');
         }
 
-        &--svg{
+        &--svg {
             fill: getColor('gray-backround');
             margin-right: 5px;
         }

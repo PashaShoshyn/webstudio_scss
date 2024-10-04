@@ -1,6 +1,7 @@
 @media (min-width: 480px) {
 
     .customers {
+
         &__div {
             &--title {
                 font-family: getFont('Roboto');
@@ -13,41 +14,53 @@
         }
 
         &__lists {
-
-            display: inline-block;
+            flex-wrap: wrap;
+            justify-content: center;
+            display: flex;
+            
             margin-bottom: 30px;
             margin-top: 64px;
-            width: 1170px;
+            width: 480px;
 
-            &--item {
-                border: 1px solid #afb1b8;
-                border-radius: 4px;
-                width: 210px;
-                height: 97px;
+            &--item{
+                margin-bottom: 30px;
+                margin-right: 30px;
+
             }
-
+            
             &--link {
                 fill: getColor('gray-backround');
-                position: absolute;
-                margin-top: 21px;
-                left: 98px;
+                width: 44px;
+                height: 44px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #afb1b8;
+                border-radius: 4px;
+                width: 170px;
+                height: 92px;
+
+                &:hover{
+                    border: 1px solid getColor('blue-color');
+                    fill: getColor('blue-color');
+                }
             }
         }
     }
 
 }
 
-// @media (min-width: 768px) {
+@media (min-width: 768px) {
 
 
-// }
+}
 
 
 
 @media (min-width: 1199px) {
     .customers {
-        
-       
+
+
         &__div {
             &--title {
                 font-family: getFont('Roboto');
@@ -62,23 +75,35 @@
 
         &__lists {
             display: flex;
-            width: 1000px;
-            
-            &--item{
-                &:not(:last-child){
+            flex-wrap: nowrap;
+            justify-content: start;
+            display: flex;
+            width: 1170px;
+            margin-bottom: 94px;
+
+            &--item {
+                &:not(:last-child) {
                     margin-right: 30px;
                 }
             }
 
-            &--link {  
+            &--link {
                 fill: getColor('gray-backround');
-                position: relative;
-                top: 20px;
-                left: 50px;
-                right: 50px;
+                width: 44px;
+                height: 44px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #afb1b8;
+                border-radius: 4px;
+                width: 170px;
+                height: 92px;
+
+                &:hover{
+                    border: 1px solid getColor('blue-color');
+                    fill: getColor('blue-color');
+                }
             }
         }
     }
-
-
 }
