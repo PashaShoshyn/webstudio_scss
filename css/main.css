@@ -154,6 +154,9 @@ body {
     margin-right: 93px;
     align-items: flex-start;
   }
+  .header__list {
+    display: none;
+  }
   .header--button:focus .nav__list {
     background-color: red;
   }
